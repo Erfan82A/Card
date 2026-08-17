@@ -1,73 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 
 <meta
     name="viewport"
-    content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
-/>
+    content="width=device-width, initial-scale=1.0"
+>
 
 <meta
     name="description"
     content="ERFAN ARABZADE — Trader & Investor"
-/>
+>
 
 <meta
     name="theme-color"
-    content="#050505"
-/>
+    content="#070706"
+>
 
 <meta
     name="color-scheme"
     content="dark"
-/>
+>
+
+<meta
+    name="robots"
+    content="index, follow"
+>
 
 <title>ERFAN ARABZADE — Trader & Investor</title>
+
 
 <style>
 
 /* =========================================================
    ERFAN ARABZADE
    DIGITAL BUSINESS CARD
-   FINAL STABLE LUXURY EDITION
+   PRODUCTION FINAL
 
-   Design:
-   Matte Black / Brushed Gold / Finance / Old Money
+   STYLE:
+   Matte Black × Brushed Gold
+   Old Money × Institutional Finance
 
-   Compatibility:
-   Chrome
-   Samsung Internet
-   Safari
-   Firefox
-   Edge
+   No external libraries.
+   No external fonts.
+   No external images.
+   No external dependencies.
    ========================================================= */
 
 
-/* ---------------------------------------------------------
+/* =========================================================
    RESET
-   --------------------------------------------------------- */
+   ========================================================= */
 
-* {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
-html,
-body {
-    margin: 0;
-    padding: 0;
-
-    width: 100%;
+html {
     min-height: 100%;
-
-    background: #050505;
+    background: #070706;
 }
 
 body {
-
+    margin: 0;
+    min-width: 320px;
     min-height: 100vh;
 
-    color: #eeeae0;
+    background:
+        #070706;
+
+    color: #eeeae1;
 
     font-family:
         Arial,
@@ -78,151 +84,156 @@ body {
     -moz-osx-font-smoothing: grayscale;
 
     overflow-x: hidden;
-
-    padding:
-        18px
-        12px
-        36px;
 }
 
 
-/* ---------------------------------------------------------
-   BACKGROUND
-   --------------------------------------------------------- */
+/* =========================================================
+   PAGE BACKGROUND
+   ========================================================= */
 
 body::before {
-
     content: "";
 
     position: fixed;
-
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;
 
     pointer-events: none;
 
     background-image:
-
         linear-gradient(
-            rgba(190,150,70,0.018) 1px,
+            rgba(194, 153, 70, 0.018) 1px,
             transparent 1px
         ),
-
         linear-gradient(
             90deg,
-            rgba(190,150,70,0.018) 1px,
+            rgba(194, 153, 70, 0.018) 1px,
             transparent 1px
         );
 
-    background-size:
-        48px 48px;
+    background-size: 52px 52px;
 
     z-index: 0;
 }
 
 
-/* ---------------------------------------------------------
-   MAIN PAGE
-   --------------------------------------------------------- */
+/* =========================================================
+   PAGE
+   ========================================================= */
 
 .page {
+    position: relative;
+    z-index: 1;
 
     width: 100%;
+    max-width: 480px;
 
-    max-width: 460px;
+    margin: 0 auto;
 
-    margin:
-        0 auto;
-
-    position: relative;
-
-    z-index: 1;
+    padding:
+        18px 12px 40px;
 }
 
 
-/* ---------------------------------------------------------
-   CARD
-   --------------------------------------------------------- */
+/* =========================================================
+   MAIN CARD
+   ========================================================= */
 
 .card {
-
     position: relative;
 
     overflow: hidden;
 
-    background:
+    width: 100%;
 
+    padding:
+        34px 16px 22px;
+
+    border:
+        1px solid rgba(196, 157, 78, 0.24);
+
+    border-radius: 26px;
+
+    background:
         linear-gradient(
             145deg,
-            #12110f 0%,
+            #151411 0%,
             #090908 48%,
             #11100d 100%
         );
 
-    border:
-        1px solid
-        rgba(190,150,70,0.23);
-
-    border-radius:
-        26px;
-
-    padding:
-        34px
-        16px
-        20px;
-
     box-shadow:
-
-        0 30px 70px
-        rgba(0,0,0,0.62),
-
-        inset 0 1px 0
-        rgba(255,255,255,0.035);
+        0 30px 80px rgba(0, 0, 0, 0.65),
+        inset 0 1px 0 rgba(255, 255, 255, 0.035);
 }
 
 
-/* ---------------------------------------------------------
-   ARCHITECTURE
-   --------------------------------------------------------- */
+/* =========================================================
+   SUBTLE GOLD GLOW
+   ========================================================= */
+
+.card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 240px;
+    height: 240px;
+
+    left: 50%;
+    top: -150px;
+
+    transform: translateX(-50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(202, 164, 88, 0.09) 0%,
+            rgba(202, 164, 88, 0.035) 35%,
+            transparent 72%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   FINANCIAL DISTRICT ARCHITECTURE
+   ========================================================= */
 
 .architecture {
-
     position: absolute;
 
     left: 0;
     right: 0;
     bottom: 0;
 
-    height: 205px;
+    height: 220px;
 
     pointer-events: none;
 
-    opacity: 0.25;
+    opacity: 0.27;
 }
 
 
-/* Buildings */
+/* =========================================================
+   BUILDINGS
+   ========================================================= */
 
 .building {
-
     position: absolute;
 
     bottom: 0;
 
     border-left:
-        1px solid
-        rgba(190,150,70,0.10);
+        1px solid rgba(197, 157, 77, 0.12);
 
     border-right:
-        1px solid
-        rgba(190,150,70,0.10);
+        1px solid rgba(197, 157, 77, 0.12);
 }
 
-
 .building::before {
-
     content: "";
 
     position: absolute;
@@ -234,191 +245,186 @@ body::before {
     bottom: 12px;
 
     background:
-
         repeating-linear-gradient(
             to bottom,
-            rgba(190,150,70,0.09) 0px,
-            rgba(190,150,70,0.09) 1px,
+            rgba(197, 157, 77, 0.095) 0,
+            rgba(197, 157, 77, 0.095) 1px,
             transparent 1px,
             transparent 15px
         );
 }
 
+.building::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 0;
+    bottom: 0;
+
+    width: 1px;
+
+    background:
+        rgba(197, 157, 77, 0.045);
+}
 
 .b1 {
     left: 3%;
-    width: 12%;
-    height: 90px;
+    width: 11%;
+    height: 92px;
 }
 
 .b2 {
-    left: 16%;
+    left: 15%;
     width: 15%;
-    height: 130px;
+    height: 132px;
 }
 
 .b3 {
-    left: 33%;
+    left: 32%;
     width: 10%;
-    height: 75px;
+    height: 78px;
 }
 
 .b4 {
-    right: 31%;
+    right: 30%;
     width: 11%;
-    height: 105px;
+    height: 108px;
 }
 
 .b5 {
-    right: 16%;
-    width: 14%;
-    height: 145px;
+    right: 15%;
+    width: 15%;
+    height: 148px;
 }
 
 .b6 {
     right: 3%;
     width: 10%;
-    height: 80px;
+    height: 82px;
 }
 
 
-/* ---------------------------------------------------------
+/* =========================================================
    TRADING CANDLES
-   --------------------------------------------------------- */
+   ========================================================= */
 
 .candles {
-
     position: absolute;
 
-    left: 13%;
-    right: 13%;
+    left: 12%;
+    right: 12%;
+    bottom: 7px;
 
-    bottom: 8px;
-
-    height: 105px;
+    height: 110px;
 
     display: flex;
 
     align-items: flex-end;
+    justify-content: space-around;
 
-    justify-content:
-        space-around;
-
-    opacity: 0.16;
+    opacity: 0.18;
 }
 
-
 .candle {
-
     position: relative;
 
     width: 5px;
 
+    border-radius: 1px;
+
     background:
         #c9a967;
-
-    border-radius: 1px;
 }
 
-
-/* Candle wick */
-
 .candle::before {
-
     content: "";
 
     position: absolute;
 
     left: 2px;
 
+    top: -18px;
+    bottom: -18px;
+
     width: 1px;
 
     background:
         #c9a967;
-
-    top: -18px;
-
-    bottom: -18px;
 }
 
-
-.c1 {
+.candle:nth-child(1) {
     height: 32px;
 }
 
-.c2 {
+.candle:nth-child(2) {
     height: 54px;
 }
 
-.c3 {
+.candle:nth-child(3) {
     height: 43px;
 }
 
-.c4 {
-    height: 70px;
+.candle:nth-child(4) {
+    height: 72px;
 }
 
-.c5 {
+.candle:nth-child(5) {
     height: 49px;
 }
 
-.c6 {
-    height: 84px;
+.candle:nth-child(6) {
+    height: 86px;
 }
 
-.c7 {
-    height: 61px;
+.candle:nth-child(7) {
+    height: 62px;
 }
 
-.c8 {
-    height: 38px;
+.candle:nth-child(8) {
+    height: 39px;
 }
 
-.c9 {
-    height: 67px;
+.candle:nth-child(9) {
+    height: 68px;
 }
 
 
-/* ---------------------------------------------------------
+/* =========================================================
    MONOGRAM
-   --------------------------------------------------------- */
+   ========================================================= */
 
 .monogram {
-
     position: relative;
-
-    z-index: 2;
+    z-index: 3;
 
     width: 82px;
     height: 82px;
 
     margin:
-        0 auto
-        22px;
+        0 auto 22px;
 
     display: flex;
 
     align-items: center;
-
     justify-content: center;
+
+    border:
+        1px solid rgba(211, 172, 92, 0.58);
 
     border-radius: 50%;
 
-    border:
-        1px solid
-        rgba(205,166,87,0.55);
-
     background:
-
         radial-gradient(
             circle at 30% 25%,
-            rgba(255,255,255,0.08),
-            transparent 35%
+            rgba(255, 255, 255, 0.075),
+            transparent 36%
         ),
-
         linear-gradient(
             145deg,
-            #201d18,
+            #211e18,
             #080807
         );
 
@@ -430,27 +436,17 @@ body::before {
         "Times New Roman",
         serif;
 
-    font-size:
-        24px;
+    font-size: 24px;
+    font-weight: 700;
 
-    font-weight:
-        bold;
-
-    letter-spacing:
-        3px;
+    letter-spacing: 3px;
 
     box-shadow:
-
-        0 0 35px
-        rgba(190,150,70,0.08),
-
-        inset 0 0 20px
-        rgba(190,150,70,0.04);
+        0 0 35px rgba(190, 150, 70, 0.08),
+        inset 0 0 20px rgba(190, 150, 70, 0.04);
 }
 
-
 .monogram::after {
-
     content: "";
 
     position: absolute;
@@ -458,144 +454,110 @@ body::before {
     inset: 6px;
 
     border:
-        1px solid
-        rgba(205,166,87,0.12);
+        1px solid rgba(211, 172, 92, 0.13);
 
     border-radius: 50%;
 }
 
 
-/* ---------------------------------------------------------
+/* =========================================================
    NAME
-   --------------------------------------------------------- */
+   ========================================================= */
 
 .name {
-
     position: relative;
+    z-index: 3;
 
-    z-index: 2;
+    text-align: center;
 
-    text-align:
-        center;
+    color:
+        #f2eee5;
 
     font-family:
         Georgia,
         "Times New Roman",
         serif;
 
-    font-size:
-        clamp(
-            25px,
-            7vw,
-            35px
-        );
+    font-size: 30px;
 
-    font-weight:
-        500;
+    line-height: 1.2;
 
-    letter-spacing:
-        2.5px;
+    font-weight: 500;
 
-    line-height:
-        1.2;
-
-    color:
-        #f2eee5;
+    letter-spacing: 2.4px;
 }
 
 
-/* ---------------------------------------------------------
+/* =========================================================
    ROLE
-   --------------------------------------------------------- */
+   ========================================================= */
 
 .role {
-
     position: relative;
+    z-index: 3;
 
-    z-index: 2;
+    margin-top: 10px;
 
-    text-align:
-        center;
-
-    margin-top:
-        10px;
+    text-align: center;
 
     color:
         #c9a967;
 
-    font-size:
-        10px;
+    font-size: 10px;
 
-    font-weight:
-        600;
+    font-weight: 600;
 
-    letter-spacing:
-        3.5px;
+    letter-spacing: 3.5px;
 
-    text-transform:
-        uppercase;
+    text-transform: uppercase;
 }
 
 
-/* ---------------------------------------------------------
-   SIGNATURE QUOTE
-   --------------------------------------------------------- */
+/* =========================================================
+   SIGNATURE
+   ========================================================= */
 
 .quote {
-
     position: relative;
+    z-index: 3;
 
-    z-index: 2;
+    margin-top: 13px;
 
-    text-align:
-        center;
-
-    margin-top:
-        13px;
+    text-align: center;
 
     color:
-        #8e8063;
+        #918268;
 
     font-family:
         Georgia,
         "Times New Roman",
         serif;
 
-    font-size:
-        10px;
+    font-size: 10px;
 
-    font-style:
-        italic;
+    font-style: italic;
 
-    letter-spacing:
-        1.7px;
+    letter-spacing: 1.7px;
 
-    text-transform:
-        uppercase;
+    text-transform: uppercase;
 }
 
 
-/* ---------------------------------------------------------
-   GOLD LINE
-   --------------------------------------------------------- */
+/* =========================================================
+   GOLD DIVIDER
+   ========================================================= */
 
 .gold-line {
-
     position: relative;
+    z-index: 3;
 
-    z-index: 2;
-
-    width:
-        70px;
-
-    height:
-        1px;
+    width: 76px;
+    height: 1px;
 
     margin:
         21px auto 0;
 
     background:
-
         linear-gradient(
             90deg,
             transparent,
@@ -605,253 +567,266 @@ body::before {
 }
 
 
-/* ---------------------------------------------------------
+/* =========================================================
    CONTACT LINKS
-   --------------------------------------------------------- */
+   ========================================================= */
 
 .links {
-
     position: relative;
+    z-index: 3;
 
-    z-index: 2;
+    display: grid;
 
-    display:
-        grid;
+    gap: 9px;
 
-    gap:
-        9px;
-
-    margin-top:
-        25px;
+    margin-top: 25px;
 }
 
 
+/* =========================================================
+   LINK CARD
+   ========================================================= */
+
 .link {
+    position: relative;
 
-    min-height:
-        64px;
+    display: flex;
 
-    display:
-        flex;
+    align-items: center;
 
-    align-items:
-        center;
+    width: 100%;
+    min-height: 64px;
 
     padding:
         10px 12px;
 
-    text-decoration:
-        none;
+    border:
+        1px solid rgba(255, 255, 255, 0.065);
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            100deg,
+            rgba(255, 255, 255, 0.035),
+            rgba(255, 255, 255, 0.012)
+        );
 
     color:
-        #eeeae0;
+        #eeeae1;
 
-    background:
+    text-decoration: none;
 
-        linear-gradient(
-            100deg,
-            rgba(255,255,255,0.035),
-            rgba(255,255,255,0.012)
-        );
-
-    border:
-        1px solid
-        rgba(255,255,255,0.065);
-
-    border-radius:
-        14px;
+    -webkit-tap-highlight-color:
+        transparent;
 
     transition:
-        border-color
-        0.2s ease,
-
-        background
-        0.2s ease,
-
-        transform
-        0.2s ease;
+        border-color 0.18s ease,
+        background 0.18s ease,
+        transform 0.18s ease;
 }
 
 
-.link:hover {
+/* Desktop hover */
 
+@media (hover: hover) {
+
+    .link:hover {
+        transform:
+            translateY(-1px);
+
+        border-color:
+            rgba(197, 157, 77, 0.30);
+
+        background:
+            linear-gradient(
+                100deg,
+                rgba(190, 150, 70, 0.07),
+                rgba(255, 255, 255, 0.015)
+            );
+    }
+
+}
+
+
+/* Mobile press */
+
+.link:active {
     transform:
-        translateY(-1px);
-
-    border-color:
-        rgba(190,150,70,0.30);
-
-    background:
-
-        linear-gradient(
-            100deg,
-            rgba(190,150,70,0.07),
-            rgba(255,255,255,0.015)
-        );
+        scale(0.992);
 }
 
+
+/* =========================================================
+   LINK ICON
+   ========================================================= */
 
 .icon {
-
-    width:
-        39px;
-
-    height:
-        39px;
+    width: 40px;
+    height: 40px;
 
     flex:
-        0 0 39px;
+        0 0 40px;
 
-    display:
-        flex;
+    display: flex;
 
-    align-items:
-        center;
-
-    justify-content:
-        center;
-
-    border-radius:
-        10px;
+    align-items: center;
+    justify-content: center;
 
     border:
-        1px solid
-        rgba(190,150,70,0.14);
+        1px solid rgba(190, 150, 70, 0.15);
+
+    border-radius: 10px;
 
     background:
-        rgba(190,150,70,0.035);
+        rgba(190, 150, 70, 0.035);
 
     color:
         #d6b66e;
 
-    font-size:
-        17px;
+    font-size: 17px;
 }
 
+
+/* =========================================================
+   LINK INFORMATION
+   ========================================================= */
 
 .link-info {
+    min-width: 0;
 
-    min-width:
-        0;
-
-    margin-left:
-        12px;
+    margin-left: 12px;
 }
 
-
 .label {
+    display: block;
 
-    display:
-        block;
-
-    margin-bottom:
-        3px;
+    margin-bottom: 4px;
 
     color:
         #77736b;
 
-    font-size:
-        9px;
+    font-size: 9px;
 
-    letter-spacing:
-        1.6px;
+    letter-spacing: 1.6px;
 
-    text-transform:
-        uppercase;
+    text-transform: uppercase;
 }
 
-
 .value {
-
-    display:
-        block;
+    display: block;
 
     color:
         #e9e5dc;
 
-    font-size:
-        13.5px;
+    font-size: 13.5px;
 
-    font-weight:
-        500;
+    font-weight: 500;
+
+    line-height: 1.35;
 
     overflow-wrap:
         anywhere;
 }
 
 
-.arrow {
+/* =========================================================
+   ARROW
+   ========================================================= */
 
-    margin-left:
-        auto;
+.arrow {
+    flex:
+        0 0 auto;
+
+    margin-left: auto;
+    padding-left: 8px;
 
     color:
         #55524d;
 
-    font-size:
-        20px;
+    font-size: 20px;
 
-    padding-left:
-        8px;
+    line-height: 1;
+}
+
+@media (hover: hover) {
+
+    .link:hover .arrow {
+        color:
+            #c9a967;
+    }
+
 }
 
 
-.link:hover .arrow {
+/* =========================================================
+   PHONE NUMBER
+   ========================================================= */
 
-    color:
-        #c9a967;
+.phone-number {
+    white-space: nowrap;
+
+    letter-spacing:
+        0.15px;
 }
 
 
-/* ---------------------------------------------------------
-   PAYMENT
-   --------------------------------------------------------- */
+/* =========================================================
+   PAYMENT SECTION
+   ========================================================= */
 
 .payment {
-
     position: relative;
+    z-index: 3;
 
-    z-index: 2;
+    margin-top: 15px;
 
-    margin-top:
-        15px;
-
-    overflow:
-        hidden;
+    overflow: hidden;
 
     border:
-        1px solid
-        rgba(190,150,70,0.20);
+        1px solid rgba(190, 150, 70, 0.20);
 
-    border-radius:
-        17px;
+    border-radius: 17px;
 
     background:
-
         linear-gradient(
             145deg,
-            rgba(190,150,70,0.055),
-            rgba(255,255,255,0.012)
+            rgba(190, 150, 70, 0.055),
+            rgba(255, 255, 255, 0.012)
         );
 }
 
 
-.payment-header {
+/* =========================================================
+   PAYMENT HEADER
+   ========================================================= */
 
-    min-height:
-        62px;
+.payment-header {
+    width: 100%;
+
+    min-height: 62px;
 
     padding:
         13px 15px;
 
-    display:
-        flex;
+    display: flex;
 
-    align-items:
-        center;
+    align-items: center;
+    justify-content: space-between;
 
-    justify-content:
-        space-between;
+    border: 0;
+
+    background:
+        transparent;
+
+    color:
+        inherit;
+
+    font-family:
+        inherit;
+
+    text-align:
+        left;
 
     cursor:
         pointer;
@@ -860,230 +835,211 @@ body::before {
         transparent;
 }
 
+.payment-header:focus-visible {
+    outline:
+        2px solid rgba(201, 169, 103, 0.6);
+
+    outline-offset:
+        -2px;
+}
+
+
+/* =========================================================
+   PAYMENT LEFT
+   ========================================================= */
 
 .payment-left {
+    display: flex;
 
-    display:
-        flex;
+    align-items: center;
 
-    align-items:
-        center;
-
-    gap:
-        10px;
+    gap: 10px;
 }
-
 
 .payment-icon {
+    width: 30px;
+    height: 30px;
 
-    width:
-        30px;
+    display: flex;
 
-    height:
-        30px;
-
-    display:
-        flex;
-
-    align-items:
-        center;
-
-    justify-content:
-        center;
-
-    border-radius:
-        8px;
+    align-items: center;
+    justify-content: center;
 
     border:
-        1px solid
-        rgba(190,150,70,0.20);
+        1px solid rgba(190, 150, 70, 0.20);
+
+    border-radius: 8px;
 
     color:
         #d6b66e;
 
-    font-size:
-        11px;
+    font-size: 11px;
 }
-
 
 .payment-title {
-
     color:
         #d6b66e;
 
-    font-size:
-        10px;
+    font-size: 10px;
 
-    font-weight:
-        600;
+    font-weight: 600;
 
-    letter-spacing:
-        2.5px;
+    letter-spacing: 2.5px;
 
-    text-transform:
-        uppercase;
+    text-transform: uppercase;
 }
 
-
 .payment-subtitle {
-
-    margin-top:
-        3px;
+    margin-top: 3px;
 
     color:
         #55524d;
 
-    font-size:
-        8px;
+    font-size: 8px;
 
-    letter-spacing:
-        0.7px;
+    letter-spacing: 0.7px;
 }
 
 
-.payment-chevron {
+/* =========================================================
+   CHEVRON
+   ========================================================= */
 
+.payment-chevron {
     color:
         #b99550;
 
-    font-size:
-        17px;
+    font-size: 17px;
+
+    line-height: 1;
 
     transition:
-        transform
-        0.25s ease;
+        transform 0.2s ease;
 }
 
-
 .payment.open .payment-chevron {
-
     transform:
         rotate(180deg);
 }
 
 
-.payment-body {
+/* =========================================================
+   PAYMENT BODY
+   ========================================================= */
 
-    display:
-        none;
+.payment-body {
+    display: none;
 
     padding:
         0 14px 14px;
 }
 
-
 .payment.open .payment-body {
-
-    display:
-        block;
+    display: block;
 }
 
 
-.payment-box {
+/* =========================================================
+   PAYMENT BOX
+   ========================================================= */
 
+.payment-box {
     padding:
         12px;
 
     margin-top:
         8px;
 
+    border:
+        1px solid rgba(255, 255, 255, 0.055);
+
     border-radius:
         12px;
 
-    border:
-        1px solid
-        rgba(255,255,255,0.055);
-
     background:
-        rgba(0,0,0,0.17);
+        rgba(0, 0, 0, 0.17);
 }
 
 
-.payment-label {
+/* =========================================================
+   PAYMENT ROW
+   ========================================================= */
 
-    margin-bottom:
-        5px;
+.payment-row {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+}
+
+
+/* =========================================================
+   PAYMENT TEXT
+   ========================================================= */
+
+.payment-label {
+    margin-bottom: 5px;
 
     color:
         #625e57;
 
-    font-size:
-        8px;
+    font-size: 8px;
 
-    letter-spacing:
-        1.6px;
+    letter-spacing: 1.6px;
 
-    text-transform:
-        uppercase;
+    text-transform: uppercase;
 }
 
-
 .payment-value {
+    flex: 1;
+
+    min-width: 0;
 
     color:
         #e7e2d8;
 
-    font-size:
-        12.5px;
+    font-size: 12.5px;
 
-    line-height:
-        1.5;
+    line-height: 1.5;
 
     overflow-wrap:
         anywhere;
 }
 
-
 .payment-value strong {
-
     color:
         #d6b66e;
 }
 
 
-.payment-row {
-
-    display:
-        flex;
-
-    align-items:
-        center;
-
-    gap:
-        9px;
-}
-
-
-.payment-row .payment-value {
-
-    flex:
-        1;
-
-    min-width:
-        0;
-}
-
+/* =========================================================
+   COPY BUTTON
+   ========================================================= */
 
 .copy {
-
     flex:
         0 0 auto;
 
+    min-width: 58px;
+
+    padding:
+        8px 9px;
+
     border:
-        1px solid
-        rgba(190,150,70,0.24);
+        1px solid rgba(190, 150, 70, 0.24);
 
     border-radius:
         8px;
 
     background:
-        rgba(190,150,70,0.05);
+        rgba(190, 150, 70, 0.05);
 
     color:
         #d6b66e;
 
-    padding:
-        8px 9px;
+    font-family:
+        inherit;
 
     font-size:
         8px;
@@ -1101,23 +1057,19 @@ body::before {
         transparent;
 }
 
-
 .copy:active {
-
     background:
-        rgba(190,150,70,0.15);
+        rgba(190, 150, 70, 0.15);
 }
 
 
-/* ---------------------------------------------------------
+/* =========================================================
    FOOTER
-   --------------------------------------------------------- */
+   ========================================================= */
 
 .footer {
-
     position: relative;
-
-    z-index: 2;
+    z-index: 3;
 
     margin-top:
         19px;
@@ -1126,8 +1078,7 @@ body::before {
         14px;
 
     border-top:
-        1px solid
-        rgba(255,255,255,0.035);
+        1px solid rgba(255, 255, 255, 0.035);
 
     text-align:
         center;
@@ -1146,33 +1097,26 @@ body::before {
 }
 
 
-/* ---------------------------------------------------------
+/* =========================================================
    MOBILE
-   --------------------------------------------------------- */
+   ========================================================= */
 
 @media (max-width: 420px) {
 
-    body {
-
+    .page {
         padding:
-            10px
-            9px
-            24px;
+            10px 8px 28px;
     }
 
     .card {
-
         padding:
-            30px
-            12px
-            18px;
+            30px 11px 19px;
 
         border-radius:
             23px;
     }
 
     .monogram {
-
         width:
             76px;
 
@@ -1184,61 +1128,125 @@ body::before {
     }
 
     .name {
-
         font-size:
             24px;
 
         letter-spacing:
-            2px;
+            1.8px;
     }
 
     .role {
-
         font-size:
             8.5px;
 
         letter-spacing:
-            3px;
+            2.8px;
     }
 
     .quote {
-
         font-size:
             9px;
 
         letter-spacing:
-            1.4px;
+            1.35px;
     }
 
     .link {
-
         min-height:
             61px;
     }
 
     .value {
-
         font-size:
             13px;
     }
 
-    .architecture {
+    .phone-number {
+        font-size:
+            12.5px;
+    }
 
+    .architecture {
         height:
-            165px;
+            175px;
     }
 
     .candles {
-
         left:
-            15%;
+            14%;
 
         right:
-            15%;
+            14%;
     }
 }
 
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 350px) {
+
+    .name {
+        font-size:
+            22px;
+
+        letter-spacing:
+            1.2px;
+    }
+
+    .role {
+        font-size:
+            8px;
+
+        letter-spacing:
+            2.2px;
+    }
+
+    .phone-number {
+        font-size:
+            11.5px;
+    }
+
+    .icon {
+        width:
+            37px;
+
+        height:
+            37px;
+
+        flex-basis:
+            37px;
+    }
+
+    .link-info {
+        margin-left:
+            9px;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior:
+            auto !important;
+
+        transition:
+            none !important;
+    }
+
+}
+
 </style>
+
 </head>
 
 
@@ -1252,7 +1260,7 @@ body::before {
 
 
     <!-- =================================================
-         FINANCIAL DISTRICT ARCHITECTURE
+         SUBTLE FINANCIAL ARCHITECTURE
          ================================================= -->
 
     <div
@@ -1268,19 +1276,17 @@ body::before {
         <div class="building b6"></div>
 
 
-        <!-- Minimal Trading Candles -->
-
         <div class="candles">
 
-            <div class="candle c1"></div>
-            <div class="candle c2"></div>
-            <div class="candle c3"></div>
-            <div class="candle c4"></div>
-            <div class="candle c5"></div>
-            <div class="candle c6"></div>
-            <div class="candle c7"></div>
-            <div class="candle c8"></div>
-            <div class="candle c9"></div>
+            <div class="candle"></div>
+            <div class="candle"></div>
+            <div class="candle"></div>
+            <div class="candle"></div>
+            <div class="candle"></div>
+            <div class="candle"></div>
+            <div class="candle"></div>
+            <div class="candle"></div>
+            <div class="candle"></div>
 
         </div>
 
@@ -1291,7 +1297,10 @@ body::before {
          MONOGRAM
          ================================================= -->
 
-    <div class="monogram">
+    <div
+        class="monogram"
+        aria-label="EA"
+    >
         EA
     </div>
 
@@ -1305,198 +1314,4 @@ body::before {
     </div>
 
 
-    <!-- =================================================
-         ROLE
-         ================================================= -->
-
-    <div class="role">
-        Trader &amp; Investor
-    </div>
-
-
-    <!-- =================================================
-         SIGNATURE
-         ================================================= -->
-
-    <div class="quote">
-        Patience Builds Fortune.
-    </div>
-
-
-    <div class="gold-line"></div>
-
-
-    <!-- =================================================
-         CONTACT
-         ================================================= -->
-
-    <div class="links">
-
-
-        <!-- Instagram -->
-
-        <a
-            class="link"
-            href="https://www.instagram.com/Er82fan.A/"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-
-            <div class="icon">
-                ◎
-            </div>
-
-            <div class="link-info">
-
-                <span class="label">
-                    Instagram
-                </span>
-
-                <span class="value">
-                    @Er82fan.A
-                </span>
-
-            </div>
-
-            <span class="arrow">
-                ›
-            </span>
-
-        </a>
-
-
-        <!-- Telegram -->
-
-        <a
-            class="link"
-            href="https://t.me/ErfanA01"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-
-            <div class="icon">
-                ✈
-            </div>
-
-            <div class="link-info">
-
-                <span class="label">
-                    Telegram
-                </span>
-
-                <span class="value">
-                    @ErfanA01
-                </span>
-
-            </div>
-
-            <span class="arrow">
-                ›
-            </span>
-
-        </a>
-
-
-        <!-- Email -->
-
-        <a
-            class="link"
-            href="mailto:erfanarabzade82@gmail.com"
-        >
-
-            <div class="icon">
-                ✉
-            </div>
-
-            <div class="link-info">
-
-                <span class="label">
-                    Email
-                </span>
-
-                <span class="value">
-                    erfanarabzade82@gmail.com
-                </span>
-
-            </div>
-
-            <span class="arrow">
-                ›
-            </span>
-
-        </a>
-
-
-        <!-- Phone -->
-
-        <a
-            class="link"
-            href="tel:09132660062"
-        >
-
-            <div class="icon">
-                ☎
-            </div>
-
-            <div class="link-info">
-
-                <span class="label">
-                    Phone
-                </span>
-
-                <span class="value">
-                    09132660062
-                </span>
-
-            </div>
-
-            <span class="arrow">
-                ›
-            </span>
-
-        </a>
-
-
-    </div>
-
-
-    <!-- =================================================
-         PAYMENT
-         ================================================= -->
-
-    <section
-        class="payment"
-        id="payment"
-    >
-
-
-        <div
-            class="payment-header"
-            onclick="togglePayment()"
-            role="button"
-            aria-expanded="false"
-        >
-
-            <div class="payment-left">
-
-                <div class="payment-icon">
-                    ◆
-                </div>
-
-                <div>
-
-                    <div class="payment-title">
-                        Payment
-                    </div>
-
-                    <div class="payment-subtitle">
-                        Bank transfer details
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div class="payment-chevron">
-           
+    
