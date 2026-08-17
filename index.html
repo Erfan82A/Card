@@ -2,1297 +2,784 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="ERFAN ARABZADE — Trader & Investor">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#080807">
-<meta name="color-scheme" content="dark">
-
+<meta name="description" content="ERFAN ARABZADE — Trader & Investor">
 <title>ERFAN ARABZADE — Trader & Investor</title>
 
 <style>
+*{box-sizing:border-box}
 
-* {
-    box-sizing: border-box;
+html,body{
+margin:0;
+min-width:320px;
+min-height:100%;
+background:#080807;
 }
 
-html,
-body {
-    margin: 0;
-    padding: 0;
-    min-width: 320px;
-    min-height: 100%;
-    background: #080807;
+body{
+padding:18px 12px 38px;
+color:#eeeae1;
+font-family:Arial,Helvetica,sans-serif;
+-webkit-font-smoothing:antialiased;
+overflow-x:hidden;
 }
 
-body {
-    color: #eeeae1;
-    font-family: Arial, Helvetica, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    overflow-x: hidden;
-    padding: 18px 12px 38px;
+body:before{
+content:"";
+position:fixed;
+inset:0;
+pointer-events:none;
+background:
+linear-gradient(rgba(200,160,75,.018) 1px,transparent 1px),
+linear-gradient(90deg,rgba(200,160,75,.018) 1px,transparent 1px);
+background-size:50px 50px;
 }
 
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-
-    background-image:
-        linear-gradient(
-            rgba(200,160,75,.018) 1px,
-            transparent 1px
-        ),
-        linear-gradient(
-            90deg,
-            rgba(200,160,75,.018) 1px,
-            transparent 1px
-        );
-
-    background-size: 50px 50px;
+.page{
+width:100%;
+max-width:470px;
+margin:auto;
+position:relative;
+z-index:1;
 }
 
-.page {
-    width: 100%;
-    max-width: 470px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 1;
+.card{
+position:relative;
+overflow:hidden;
+padding:34px 16px 20px;
+border:1px solid rgba(200,160,75,.24);
+border-radius:26px;
+background:linear-gradient(145deg,#151411,#090908 48%,#11100d);
+box-shadow:0 30px 80px rgba(0,0,0,.65),inset 0 1px rgba(255,255,255,.035);
 }
 
-.card {
-    position: relative;
-    overflow: hidden;
-
-    padding: 34px 16px 20px;
-
-    border: 1px solid rgba(200,160,75,.24);
-    border-radius: 26px;
-
-    background:
-        linear-gradient(
-            145deg,
-            #151411 0%,
-            #090908 48%,
-            #11100d 100%
-        );
-
-    box-shadow:
-        0 30px 80px rgba(0,0,0,.65),
-        inset 0 1px 0 rgba(255,255,255,.035);
+.card:before{
+content:"";
+position:absolute;
+width:280px;
+height:280px;
+top:-190px;
+left:50%;
+transform:translateX(-50%);
+border-radius:50%;
+background:radial-gradient(circle,rgba(205,165,85,.1),transparent 68%);
+pointer-events:none;
 }
 
-.card::before {
-    content: "";
-    position: absolute;
+/* BACKGROUND */
 
-    width: 280px;
-    height: 280px;
-
-    top: -190px;
-    left: 50%;
-
-    transform: translateX(-50%);
-
-    border-radius: 50%;
-
-    background:
-        radial-gradient(
-            circle,
-            rgba(205,165,85,.10),
-            transparent 68%
-        );
-
-    pointer-events: none;
+.architecture{
+position:absolute;
+left:0;
+right:0;
+bottom:0;
+height:205px;
+pointer-events:none;
+opacity:.25;
 }
 
-
-/* =========================================================
-   BACKGROUND ARCHITECTURE
-   ========================================================= */
-
-.architecture {
-    position: absolute;
-
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    height: 205px;
-
-    pointer-events: none;
-    opacity: .25;
+.building{
+position:absolute;
+bottom:0;
+border-left:1px solid rgba(200,160,75,.11);
+border-right:1px solid rgba(200,160,75,.11);
 }
 
-.building {
-    position: absolute;
-    bottom: 0;
-
-    border-left:
-        1px solid rgba(200,160,75,.11);
-
-    border-right:
-        1px solid rgba(200,160,75,.11);
+.building:before{
+content:"";
+position:absolute;
+left:20%;
+right:20%;
+top:12px;
+bottom:12px;
+background:repeating-linear-gradient(
+to bottom,
+rgba(200,160,75,.09) 0,
+rgba(200,160,75,.09) 1px,
+transparent 1px,
+transparent 15px
+);
 }
 
-.building::before {
-    content: "";
+.b1{left:3%;width:12%;height:90px}
+.b2{left:16%;width:15%;height:130px}
+.b3{left:33%;width:10%;height:75px}
+.b4{right:31%;width:11%;height:105px}
+.b5{right:16%;width:14%;height:145px}
+.b6{right:3%;width:10%;height:80px}
 
-    position: absolute;
-
-    left: 20%;
-    right: 20%;
-
-    top: 12px;
-    bottom: 12px;
-
-    background:
-        repeating-linear-gradient(
-            to bottom,
-            rgba(200,160,75,.09) 0,
-            rgba(200,160,75,.09) 1px,
-            transparent 1px,
-            transparent 15px
-        );
+.candles{
+position:absolute;
+left:13%;
+right:13%;
+bottom:8px;
+height:105px;
+display:flex;
+align-items:flex-end;
+justify-content:space-around;
+opacity:.17;
 }
 
-.b1 {
-    left: 3%;
-    width: 12%;
-    height: 90px;
+.candle{
+position:relative;
+width:5px;
+background:#c9a967;
 }
 
-.b2 {
-    left: 16%;
-    width: 15%;
-    height: 130px;
+.candle:before{
+content:"";
+position:absolute;
+left:2px;
+top:-18px;
+bottom:-18px;
+width:1px;
+background:#c9a967;
 }
 
-.b3 {
-    left: 33%;
-    width: 10%;
-    height: 75px;
+.c1{height:32px}.c2{height:54px}.c3{height:43px}
+.c4{height:70px}.c5{height:49px}.c6{height:84px}
+.c7{height:61px}.c8{height:38px}.c9{height:67px}
+
+/* HEADER */
+
+.monogram{
+position:relative;
+z-index:2;
+width:82px;
+height:82px;
+margin:0 auto 22px;
+display:flex;
+align-items:center;
+justify-content:center;
+border:1px solid rgba(210,170,90,.58);
+border-radius:50%;
+background:linear-gradient(145deg,#211e19,#080807);
+color:#dfc27f;
+font:700 24px Georgia,"Times New Roman",serif;
+letter-spacing:3px;
 }
 
-.b4 {
-    right: 31%;
-    width: 11%;
-    height: 105px;
+.monogram:after{
+content:"";
+position:absolute;
+inset:6px;
+border:1px solid rgba(210,170,90,.13);
+border-radius:50%;
 }
 
-.b5 {
-    right: 16%;
-    width: 14%;
-    height: 145px;
+.name{
+position:relative;
+z-index:2;
+text-align:center;
+color:#f2eee5;
+font:500 30px/1.2 Georgia,"Times New Roman",serif;
+letter-spacing:2.4px;
 }
 
-.b6 {
-    right: 3%;
-    width: 10%;
-    height: 80px;
+.role{
+position:relative;
+z-index:2;
+margin-top:10px;
+text-align:center;
+color:#c9a967;
+font-size:10px;
+font-weight:600;
+letter-spacing:3.5px;
+text-transform:uppercase;
 }
 
-
-/* =========================================================
-   CANDLESTICKS
-   ========================================================= */
-
-.candles {
-    position: absolute;
-
-    left: 13%;
-    right: 13%;
-    bottom: 8px;
-
-    height: 105px;
-
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-around;
-
-    opacity: .17;
+.quote{
+position:relative;
+z-index:2;
+margin-top:13px;
+text-align:center;
+color:#918268;
+font:italic 10px Georgia,"Times New Roman",serif;
+letter-spacing:1.7px;
+text-transform:uppercase;
 }
 
-.candle {
-    position: relative;
-
-    width: 5px;
-
-    background: #c9a967;
-
-    border-radius: 1px;
+.gold-line{
+position:relative;
+z-index:2;
+width:76px;
+height:1px;
+margin:21px auto 0;
+background:linear-gradient(90deg,transparent,#c9a967,transparent);
 }
 
-.candle::before {
-    content: "";
+/* LINKS */
 
-    position: absolute;
-
-    left: 2px;
-    top: -18px;
-    bottom: -18px;
-
-    width: 1px;
-
-    background: #c9a967;
+.links{
+position:relative;
+z-index:3;
+display:grid;
+gap:9px;
+margin-top:25px;
 }
 
-.c1 { height: 32px; }
-.c2 { height: 54px; }
-.c3 { height: 43px; }
-.c4 { height: 70px; }
-.c5 { height: 49px; }
-.c6 { height: 84px; }
-.c7 { height: 61px; }
-.c8 { height: 38px; }
-.c9 { height: 67px; }
-
-
-/* =========================================================
-   HEADER
-   ========================================================= */
-
-.monogram {
-    position: relative;
-    z-index: 2;
-
-    width: 82px;
-    height: 82px;
-
-    margin: 0 auto 22px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border: 1px solid rgba(210,170,90,.58);
-    border-radius: 50%;
-
-    background:
-        radial-gradient(
-            circle at 30% 25%,
-            rgba(255,255,255,.08),
-            transparent 35%
-        ),
-        linear-gradient(
-            145deg,
-            #211e19,
-            #080807
-        );
-
-    color: #dfc27f;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size: 24px;
-    font-weight: bold;
-
-    letter-spacing: 3px;
-
-    box-shadow:
-        0 0 35px rgba(190,150,70,.08),
-        inset 0 0 20px rgba(190,150,70,.04);
+.link{
+display:flex;
+align-items:center;
+width:100%;
+min-height:64px;
+padding:10px 12px;
+border:1px solid rgba(255,255,255,.065);
+border-radius:14px;
+background:linear-gradient(100deg,rgba(255,255,255,.035),rgba(255,255,255,.012));
+color:#eeeae1;
+text-decoration:none;
+-webkit-tap-highlight-color:transparent;
 }
 
-.monogram::after {
-    content: "";
+.link:active{transform:scale(.992)}
 
-    position: absolute;
-
-    inset: 6px;
-
-    border:
-        1px solid rgba(210,170,90,.13);
-
-    border-radius: 50%;
+.icon{
+width:40px;
+height:40px;
+flex:0 0 40px;
+display:flex;
+align-items:center;
+justify-content:center;
+border:1px solid rgba(190,150,70,.15);
+border-radius:10px;
+background:rgba(190,150,70,.035);
+color:#d6b66e;
+font-size:17px;
 }
 
-.name {
-    position: relative;
-    z-index: 2;
-
-    text-align: center;
-
-    color: #f2eee5;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size: 30px;
-    line-height: 1.2;
-    font-weight: 500;
-
-    letter-spacing: 2.4px;
+.link-info{
+min-width:0;
+margin-left:12px;
 }
 
-.role {
-    position: relative;
-    z-index: 2;
-
-    margin-top: 10px;
-
-    text-align: center;
-
-    color: #c9a967;
-
-    font-size: 10px;
-    font-weight: 600;
-
-    letter-spacing: 3.5px;
-
-    text-transform: uppercase;
+.label{
+display:block;
+margin-bottom:4px;
+color:#77736b;
+font-size:9px;
+letter-spacing:1.6px;
+text-transform:uppercase;
 }
 
-.quote {
-    position: relative;
-    z-index: 2;
-
-    margin-top: 13px;
-
-    text-align: center;
-
-    color: #918268;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size: 10px;
-    font-style: italic;
-
-    letter-spacing: 1.7px;
-
-    text-transform: uppercase;
+.value{
+display:block;
+color:#e9e5dc;
+font-size:13.5px;
+line-height:1.4;
+overflow-wrap:anywhere;
 }
 
-.gold-line {
-    position: relative;
-    z-index: 2;
-
-    width: 76px;
-    height: 1px;
-
-    margin: 21px auto 0;
-
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            #c9a967,
-            transparent
-        );
+.phone-number{
+white-space:nowrap;
+font-size:12.8px;
 }
 
-
-/* =========================================================
-   LINKS
-   ========================================================= */
-
-.links {
-    position: relative;
-    z-index: 3;
-
-    display: grid;
-
-    gap: 9px;
-
-    margin-top: 25px;
+.arrow{
+margin-left:auto;
+padding-left:8px;
+color:#55524d;
+font-size:20px;
 }
 
-.link {
-    display: flex;
-    align-items: center;
+/* PAYMENT - NO JAVASCRIPT */
 
-    width: 100%;
-    min-height: 64px;
-
-    padding: 10px 12px;
-
-    border:
-        1px solid rgba(255,255,255,.065);
-
-    border-radius: 14px;
-
-    background:
-        linear-gradient(
-            100deg,
-            rgba(255,255,255,.035),
-            rgba(255,255,255,.012)
-        );
-
-    color: #eeeae1;
-
-    text-decoration: none;
-
-    -webkit-tap-highlight-color: transparent;
-
-    transition:
-        transform .15s ease,
-        border-color .15s ease,
-        background .15s ease;
+.payment{
+position:relative;
+z-index:5;
+margin-top:15px;
+overflow:hidden;
+border:1px solid rgba(190,150,70,.22);
+border-radius:17px;
+background:linear-gradient(145deg,rgba(190,150,70,.055),rgba(255,255,255,.012));
 }
 
-.link:active {
-    transform: scale(.992);
+.payment summary{
+list-style:none;
 }
 
-@media (hover:hover) {
-
-    .link:hover {
-        transform: translateY(-1px);
-
-        border-color:
-            rgba(200,160,75,.30);
-
-        background:
-            linear-gradient(
-                100deg,
-                rgba(190,150,70,.07),
-                rgba(255,255,255,.015)
-            );
-    }
+.payment summary::-webkit-details-marker{
+display:none;
 }
 
-.icon {
-    width: 40px;
-    height: 40px;
-
-    flex: 0 0 40px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border:
-        1px solid rgba(190,150,70,.15);
-
-    border-radius: 10px;
-
-    background:
-        rgba(190,150,70,.035);
-
-    color: #d6b66e;
-
-    font-size: 17px;
+.payment-header{
+width:100%;
+min-height:64px;
+padding:13px 15px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+cursor:pointer;
+-webkit-tap-highlight-color:transparent;
 }
 
-.link-info {
-    min-width: 0;
-
-    margin-left: 12px;
+.payment-left{
+display:flex;
+align-items:center;
+gap:10px;
 }
 
-.label {
-    display: block;
-
-    margin-bottom: 4px;
-
-    color: #77736b;
-
-    font-size: 9px;
-
-    letter-spacing: 1.6px;
-
-    text-transform: uppercase;
+.payment-icon{
+width:30px;
+height:30px;
+display:flex;
+align-items:center;
+justify-content:center;
+border:1px solid rgba(190,150,70,.20);
+border-radius:8px;
+color:#d6b66e;
+font-size:11px;
 }
 
-.value {
-    display: block;
-
-    color: #e9e5dc;
-
-    font-size: 13.5px;
-    font-weight: 500;
-
-    line-height: 1.4;
-
-    overflow-wrap: anywhere;
+.payment-title{
+display:block;
+color:#d6b66e;
+font-size:10px;
+font-weight:600;
+letter-spacing:2.5px;
+text-transform:uppercase;
 }
 
-.phone-number {
-    white-space: nowrap;
-
-    font-size: 12.8px;
+.payment-subtitle{
+display:block;
+margin-top:3px;
+color:#55524d;
+font-size:8px;
+letter-spacing:.7px;
 }
 
-.arrow {
-    flex: 0 0 auto;
-
-    margin-left: auto;
-    padding-left: 8px;
-
-    color: #55524d;
-
-    font-size: 20px;
+.payment-chevron{
+color:#b99550;
+font-size:18px;
+transition:transform .2s ease;
 }
 
-
-/* =========================================================
-   PAYMENT
-   ========================================================= */
-
-.payment {
-    position: relative;
-    z-index: 5;
-
-    margin-top: 15px;
-
-    overflow: hidden;
-
-    border:
-        1px solid rgba(190,150,70,.22);
-
-    border-radius: 17px;
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(190,150,70,.055),
-            rgba(255,255,255,.012)
-        );
+.payment[open] .payment-chevron{
+transform:rotate(180deg);
 }
 
-.payment-header {
-    width: 100%;
-    min-height: 64px;
-
-    padding: 13px 15px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    border: 0;
-
-    background: transparent;
-
-    color: inherit;
-
-    font-family: inherit;
-
-    text-align: left;
-
-    cursor: pointer;
-
-    -webkit-tap-highlight-color: transparent;
+.payment-body{
+padding:0 14px 14px;
 }
 
-.payment-header:focus-visible {
-    outline:
-        2px solid rgba(200,160,75,.65);
-
-    outline-offset: -2px;
+.payment-box{
+padding:12px;
+margin-top:8px;
+border:1px solid rgba(255,255,255,.055);
+border-radius:12px;
+background:rgba(0,0,0,.17);
 }
 
-.payment-left {
-    display: flex;
-    align-items: center;
-
-    gap: 10px;
+.payment-label{
+margin-bottom:5px;
+color:#625e57;
+font-size:8px;
+letter-spacing:1.6px;
+text-transform:uppercase;
 }
 
-.payment-icon {
-    width: 30px;
-    height: 30px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border:
-        1px solid rgba(190,150,70,.20);
-
-    border-radius: 8px;
-
-    color: #d6b66e;
-
-    font-size: 11px;
+.payment-value{
+color:#e7e2d8;
+font-size:12.5px;
+line-height:1.5;
+overflow-wrap:anywhere;
 }
 
-.payment-title {
-    display: block;
-
-    color: #d6b66e;
-
-    font-size: 10px;
-    font-weight: 600;
-
-    letter-spacing: 2.5px;
-
-    text-transform: uppercase;
+.payment-value strong{
+color:#d6b66e;
 }
 
-.payment-subtitle {
-    display: block;
-
-    margin-top: 3px;
-
-    color: #55524d;
-
-    font-size: 8px;
-
-    letter-spacing: .7px;
+.payment-row{
+display:flex;
+align-items:center;
+gap:9px;
 }
 
-.payment-chevron {
-    color: #b99550;
-
-    font-size: 18px;
-
-    transition:
-        transform .2s ease;
+.payment-row .payment-value{
+flex:1;
+min-width:0;
 }
 
-.payment.open .payment-chevron {
-    transform: rotate(180deg);
+.copy{
+flex:0 0 auto;
+padding:8px 9px;
+border:1px solid rgba(190,150,70,.24);
+border-radius:8px;
+background:rgba(190,150,70,.05);
+color:#d6b66e;
+font-family:inherit;
+font-size:8px;
+font-weight:600;
+letter-spacing:1px;
+cursor:pointer;
 }
 
+/* FOOTER */
 
-/* IMPORTANT:
-   Native hidden attribute is used.
-*/
-
-.payment-body[hidden] {
-    display: none !important;
+.footer{
+position:relative;
+z-index:3;
+margin-top:19px;
+padding-top:14px;
+border-top:1px solid rgba(255,255,255,.035);
+text-align:center;
+color:#46433e;
+font-size:7px;
+letter-spacing:3px;
+text-transform:uppercase;
 }
 
-.payment-body {
-    padding: 0 14px 14px;
+@media(max-width:420px){
+
+body{
+padding:10px 8px 28px;
 }
 
-.payment-box {
-    padding: 12px;
-
-    margin-top: 8px;
-
-    border:
-        1px solid rgba(255,255,255,.055);
-
-    border-radius: 12px;
-
-    background:
-        rgba(0,0,0,.17);
+.card{
+padding:30px 11px 19px;
+border-radius:23px;
 }
 
-.payment-label {
-    margin-bottom: 5px;
-
-    color: #625e57;
-
-    font-size: 8px;
-
-    letter-spacing: 1.6px;
-
-    text-transform: uppercase;
+.monogram{
+width:76px;
+height:76px;
+font-size:22px;
 }
 
-.payment-value {
-    color: #e7e2d8;
-
-    font-size: 12.5px;
-
-    line-height: 1.5;
-
-    overflow-wrap: anywhere;
+.name{
+font-size:24px;
+letter-spacing:1.8px;
 }
 
-.payment-value strong {
-    color: #d6b66e;
+.role{
+font-size:8.5px;
+letter-spacing:2.8px;
 }
 
-.payment-row {
-    display: flex;
-
-    align-items: center;
-
-    gap: 9px;
+.quote{
+font-size:9px;
+letter-spacing:1.35px;
 }
 
-.payment-row .payment-value {
-    flex: 1;
-
-    min-width: 0;
+.link{
+min-height:61px;
 }
 
-.copy {
-    flex: 0 0 auto;
-
-    min-width: 58px;
-
-    padding: 8px 9px;
-
-    border:
-        1px solid rgba(190,150,70,.24);
-
-    border-radius: 8px;
-
-    background:
-        rgba(190,150,70,.05);
-
-    color: #d6b66e;
-
-    font-family: inherit;
-
-    font-size: 8px;
-    font-weight: 600;
-
-    letter-spacing: 1px;
-
-    cursor: pointer;
-
-    -webkit-tap-highlight-color: transparent;
+.value{
+font-size:13px;
 }
 
-.copy:active {
-    background:
-        rgba(190,150,70,.15);
+.phone-number{
+font-size:11.7px;
 }
 
-
-/* =========================================================
-   FOOTER
-   ========================================================= */
-
-.footer {
-    position: relative;
-    z-index: 3;
-
-    margin-top: 19px;
-
-    padding-top: 14px;
-
-    border-top:
-        1px solid rgba(255,255,255,.035);
-
-    text-align: center;
-
-    color: #46433e;
-
-    font-size: 7px;
-
-    letter-spacing: 3px;
-
-    text-transform: uppercase;
+.architecture{
+height:175px;
 }
 
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
-@media (max-width:420px) {
-
-    body {
-        padding: 10px 8px 28px;
-    }
-
-    .card {
-        padding: 30px 11px 19px;
-
-        border-radius: 23px;
-    }
-
-    .monogram {
-        width: 76px;
-        height: 76px;
-
-        font-size: 22px;
-    }
-
-    .name {
-        font-size: 24px;
-
-        letter-spacing: 1.8px;
-    }
-
-    .role {
-        font-size: 8.5px;
-
-        letter-spacing: 2.8px;
-    }
-
-    .quote {
-        font-size: 9px;
-
-        letter-spacing: 1.35px;
-    }
-
-    .link {
-        min-height: 61px;
-    }
-
-    .value {
-        font-size: 13px;
-    }
-
-    .phone-number {
-        font-size: 11.7px;
-    }
-
-    .architecture {
-        height: 175px;
-    }
 }
 
-@media (max-width:350px) {
+@media(max-width:350px){
 
-    .name {
-        font-size: 22px;
-
-        letter-spacing: 1.2px;
-    }
-
-    .phone-number {
-        font-size: 10.8px;
-    }
-
-    .icon {
-        width: 37px;
-        height: 37px;
-
-        flex-basis: 37px;
-    }
-
-    .link-info {
-        margin-left: 9px;
-    }
-
-    .payment-row {
-        align-items: flex-end;
-    }
+.name{
+font-size:22px;
+letter-spacing:1.2px;
 }
 
-@media (prefers-reduced-motion: reduce) {
+.phone-number{
+font-size:10.8px;
+}
 
-    *,
-    *::before,
-    *::after {
-        transition: none !important;
-    }
+.icon{
+width:37px;
+height:37px;
+flex-basis:37px;
+}
+
+.link-info{
+margin-left:9px;
+}
+
 }
 
 </style>
 </head>
 
-
 <body>
 
 <div class="page">
-
 <main class="card">
 
+<div class="architecture" aria-hidden="true">
 
-<!-- =====================================================
-     BACKGROUND ARCHITECTURE
-     ===================================================== -->
+<div class="building b1"></div>
+<div class="building b2"></div>
+<div class="building b3"></div>
+<div class="building b4"></div>
+<div class="building b5"></div>
+<div class="building b6"></div>
 
-<div
-    class="architecture"
-    aria-hidden="true"
->
-
-    <div class="building b1"></div>
-    <div class="building b2"></div>
-    <div class="building b3"></div>
-    <div class="building b4"></div>
-    <div class="building b5"></div>
-    <div class="building b6"></div>
-
-    <div class="candles">
-
-        <div class="candle c1"></div>
-        <div class="candle c2"></div>
-        <div class="candle c3"></div>
-        <div class="candle c4"></div>
-        <div class="candle c5"></div>
-        <div class="candle c6"></div>
-        <div class="candle c7"></div>
-        <div class="candle c8"></div>
-        <div class="candle c9"></div>
-
-    </div>
+<div class="candles">
+<div class="candle c1"></div>
+<div class="candle c2"></div>
+<div class="candle c3"></div>
+<div class="candle c4"></div>
+<div class="candle c5"></div>
+<div class="candle c6"></div>
+<div class="candle c7"></div>
+<div class="candle c8"></div>
+<div class="candle c9"></div>
+</div>
 
 </div>
 
-
-<!-- =====================================================
-     HEADER
-     ===================================================== -->
-
-<div class="monogram">
-    EA
-</div>
+<div class="monogram">EA</div>
 
 <div class="name">
-    ERFAN ARABZADE
+ERFAN ARABZADE
 </div>
 
 <div class="role">
-    Trader &amp; Investor
+Trader &amp; Investor
 </div>
 
 <div class="quote">
-    Patience Builds Fortune.
+Patience Builds Fortune.
 </div>
 
-<div
-    class="gold-line"
-    aria-hidden="true"
-></div>
+<div class="gold-line"></div>
 
-
-<!-- =====================================================
-     LINKS
-     ===================================================== -->
 
 <div class="links">
 
+<a class="link"
+href="https://www.instagram.com/Er82fan.A/"
+target="_blank"
+rel="noopener noreferrer">
 
-    <!-- INSTAGRAM -->
+<div class="icon">◎</div>
 
-    <a
-        class="link"
-        href="https://www.instagram.com/Er82fan.A/"
-        target="_blank"
-        rel="noopener noreferrer"
-    >
+<div class="link-info">
+<span class="label">Instagram</span>
+<span class="value">@Er82fan.A</span>
+</div>
 
-        <div
-            class="icon"
-            aria-hidden="true"
-        >
-            ◎
-        </div>
+<span class="arrow">›</span>
 
-        <div class="link-info">
-
-            <span class="label">
-                Instagram
-            </span>
-
-            <span class="value">
-                @Er82fan.A
-            </span>
-
-        </div>
-
-        <span
-            class="arrow"
-            aria-hidden="true"
-        >
-            ›
-        </span>
-
-    </a>
+</a>
 
 
-    <!-- TELEGRAM -->
+<a class="link"
+href="https://t.me/ErfanA01"
+target="_blank"
+rel="noopener noreferrer">
 
-    <a
-        class="link"
-        href="https://t.me/ErfanA01"
-        target="_blank"
-        rel="noopener noreferrer"
-    >
+<div class="icon">✈</div>
 
-        <div
-            class="icon"
-            aria-hidden="true"
-        >
-            ✈
-        </div>
+<div class="link-info">
+<span class="label">Telegram</span>
+<span class="value">@ErfanA01</span>
+</div>
 
-        <div class="link-info">
+<span class="arrow">›</span>
 
-            <span class="label">
-                Telegram
-            </span>
-
-            <span class="value">
-                @ErfanA01
-            </span>
-
-        </div>
-
-        <span
-            class="arrow"
-            aria-hidden="true"
-        >
-            ›
-        </span>
-
-    </a>
+</a>
 
 
-    <!-- EMAIL -->
+<a class="link"
+href="mailto:erfanarabzade82@gmail.com">
 
-    <a
-        class="link"
-        href="mailto:erfanarabzade82@gmail.com"
-    >
+<div class="icon">✉</div>
 
-        <div
-            class="icon"
-            aria-hidden="true"
-        >
-            ✉
-        </div>
+<div class="link-info">
+<span class="label">Email</span>
+<span class="value">erfanarabzade82@gmail.com</span>
+</div>
 
-        <div class="link-info">
+<span class="arrow">›</span>
 
-            <span class="label">
-                Email
-            </span>
-
-            <span class="value">
-                erfanarabzade82@gmail.com
-            </span>
-
-        </div>
-
-        <span
-            class="arrow"
-            aria-hidden="true"
-        >
-            ›
-        </span>
-
-    </a>
+</a>
 
 
-    <!-- PHONE -->
+<a class="link"
+href="tel:+989132660062">
 
-    <a
-        class="link"
-        href="tel:+989132660062"
-    >
+<div class="icon">☎</div>
 
-        <div
-            class="icon"
-            aria-hidden="true"
-        >
-            ☎
-        </div>
+<div class="link-info">
 
-        <div class="link-info">
+<span class="label">Phone</span>
 
-            <span class="label">
-                Phone
-            </span>
+<span class="value phone-number" dir="ltr">
+🇮🇷 IR&nbsp;&nbsp;|&nbsp;&nbsp;+98&nbsp;&nbsp;|&nbsp;&nbsp;0913 266 0062
+</span>
 
-            <span
-                class="value phone-number"
-                dir="ltr"
-            >
-                🇮🇷 IR&nbsp;&nbsp;|&nbsp;&nbsp;+98&nbsp;&nbsp;|&nbsp;&nbsp;0913 266 0062
-            </span>
+</div>
 
-        </div>
+<span class="arrow">›</span>
 
-        <span
-            class="arrow"
-            aria-hidden="true"
-        >
-            ›
-        </span>
-
-    </a>
+</a>
 
 
-    <!-- WHATSAPP -->
+<a class="link"
+href="https://wa.me/989132660062"
+target="_blank"
+rel="noopener noreferrer">
 
-    <a
-        class="link"
-        href="https://wa.me/989132660062"
-        target="_blank"
-        rel="noopener noreferrer"
-    >
+<div class="icon">◉</div>
 
-        <div
-            class="icon"
-            aria-hidden="true"
-        >
-            ◉
-        </div>
+<div class="link-info">
 
-        <div class="link-info">
+<span class="label">WhatsApp</span>
 
-            <span class="label">
-                WhatsApp
-            </span>
+<span class="value">Chat with me</span>
 
-            <span class="value">
-                Chat with me
-            </span>
+</div>
 
-        </div>
+<span class="arrow">›</span>
 
-        <span
-            class="arrow"
-            aria-hidden="true"
-        >
-            ›
-        </span>
-
-    </a>
+</a>
 
 </div>
 
 
 <!-- =====================================================
      PAYMENT
+     Native HTML <details> — NO JAVASCRIPT
      ===================================================== -->
 
-<section
-    class="payment"
-    id="payment"
->
+<details class="payment">
 
-    <button
-        class="payment-header"
-        id="paymentButton"
-        type="button"
-        aria-expanded="false"
-        aria-controls="paymentBody"
-    >
+<summary class="payment-header">
 
-        <span class="payment-left">
+<span class="payment-left">
 
-            <span
-                class="payment-icon"
-                aria-hidden="true"
-            >
-                ◆
-            </span>
+<span class="payment-icon">
+◆
+</span>
 
-            <span>
+<span>
 
-                <span class="payment-title">
-                    Payment
-                </span>
+<span class="payment-title">
+Payment
+</span>
 
-                <span class="payment-subtitle">
-                    Bank transfer details
-                </span>
+<span class="payment-subtitle">
+Bank transfer details
+</span>
 
-            </span>
+</span>
 
-        </span>
+</span>
+
+<span class="payment-chevron">
+⌄
+</span>
+
+</summary>
 
 
-        <span
-            class="payment-chevron"
-            aria-hidden="true"
-        >
-            ⌄
-        </span>
-
-    </button>
+<div class="payment-body">
 
 
-    <div
-        class="payment-body"
-        id="paymentBody"
-        hidden
-    >
+<div class="payment-box">
+
+<div class="payment-label">
+Bank
+</div>
+
+<div class="payment-value">
+<strong>
+بلوبانک (بانک سامان)
+</strong>
+</div>
+
+</div>
 
 
-        <!-- BANK -->
+<div class="payment-box">
 
-        <div class="payment-box">
+<div class="payment-label">
+Account Holder
+</div>
 
-            <div class="payment-label">
-                Bank
-            </div>
+<div class="payment-value">
+<strong>
+ERFAN ARABZADE
+</strong>
+</div>
 
-            <div class="payment-value">
-
-                <strong>
-                    بلوبانک (بانک سامان)
-                </strong>
-
-            </div>
-
-        </div>
+</div>
 
 
-        <!-- ACCOUNT HOLDER -->
+<div class="payment-box">
 
-        <div class="payment-box">
+<div class="payment-row">
 
-            <div class="payment-label">
-                Account Holder
-            </div>
+<div class="payment-value">
 
-            <div class="payment-value">
+<div class="payment-label">
+Card Number
+</div>
 
-                <strong>
-                    ERFAN ARABZADE
-                </strong>
+<span dir="ltr">
+6219 8614 0491 8806
+</span>
 
-            </div>
+</div>
 
-        </div>
+<button
+class="copy"
+type="button"
+data-copy="6219861404918806">
+COPY
+</button>
 
+</div>
 
-        <!-- CARD NUMBER -->
-
-        <div class="payment-box">
-
-            <div class="payment-row">
-
-                <div class="payment-value">
-
-                    <div class="payment-label">
-                        Card Number
-                    </div>
-
-                    <span dir="ltr">
-                        6219 8614 0491 8806
-                    </span>
-
-                </div>
+</div>
 
 
-                <button
-                    class="copy"
-                    type="button"
-                    data-copy="6219861404918806"
-                >
-                    COPY
-                </button>
+<div class="payment-box">
 
-            </div>
+<div class="payment-row">
 
-        </div>
+<div class="payment-value">
 
+<div class="payment-label">
+IBAN
+</div>
 
-        <!-- IBAN -->
+<span dir="ltr">
+IR94 0560 6118 2800 6895 0787 01
+</span>
 
-        <div class="payment-box">
+</div>
 
-            <div class="payment-row">
+<button
+class="copy"
+type="button"
+data-copy="IR940560611828006895078701">
+COPY
+</button>
 
-                <div class="payment-value">
+</div>
 
-                    <div class="payment-label">
-                        IBAN
-                    </div>
-
-                    <span dir="ltr">
-                        IR94 0560 6118 2800 6895 0787 01
-                    </span>
-
-                </div>
+</div>
 
 
-                <button
-                    class="copy"
-     
+</div>
+
+</details>
+
+
+<div class="footer">
+DIGITAL BUSINESS CARD · EA
+</div>
+
+</main>
+</div>
+
+</body>
+</html>
