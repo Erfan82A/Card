@@ -3,68 +3,637 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Erfan</title>
+  <meta name="theme-color" content="#050505">
+
+  <title>ERFAN ARABZADE — Trader & Investor</title>
 
   <style>
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #0b0b0b;
-      color: white;
-      font-family: Arial, sans-serif;
-      text-align: center;
+      padding: 0;
     }
 
-    .card {
-      width: 90%;
-      max-width: 420px;
-      padding: 40px 25px;
-      border: 1px solid #333;
-      border-radius: 24px;
-      background: #111;
-      box-sizing: border-box;
+    :root {
+      --bg: #050505;
+      --card: rgba(17, 17, 17, 0.78);
+      --border: rgba(255, 255, 255, 0.09);
+      --text: #f5f5f5;
+      --muted: #888;
+      --gold: #c8a96b;
+      --gold-light: #ead9a8;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at 50% -10%, rgba(200,169,107,0.12), transparent 35%),
+        radial-gradient(circle at 0% 80%, rgba(255,255,255,0.035), transparent 30%),
+        var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      padding: 35px 16px;
+      overflow-x: hidden;
+    }
+
+    /* Subtle trading-grid background */
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.18;
+
+      background-image:
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+
+      background-size: 45px 45px;
+
+      mask-image: linear-gradient(to bottom, black, transparent 85%);
+    }
+
+    /* Decorative glow */
+
+    body::after {
+      content: "";
+      position: fixed;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: rgba(200,169,107,0.045);
+      filter: blur(90px);
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 470px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .profile {
+      text-align: center;
+      padding: 38px 24px 30px;
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      background: linear-gradient(
+        145deg,
+        rgba(255,255,255,0.045),
+        rgba(255,255,255,0.015)
+      );
+
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+
+      box-shadow:
+        0 30px 80px rgba(0,0,0,0.55),
+        inset 0 1px 0 rgba(255,255,255,0.04);
+
+      animation: appear 0.8s ease both;
+    }
+
+    .monogram {
+      width: 82px;
+      height: 82px;
+      margin: 0 auto 22px;
+
+      border-radius: 50%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border: 1px solid rgba(200,169,107,0.45);
+
+      background:
+        radial-gradient(circle at 30% 20%, rgba(255,255,255,0.12), transparent 35%),
+        linear-gradient(145deg, #1b1b1b, #080808);
+
+      color: var(--gold-light);
+      font-size: 25px;
+      font-weight: 700;
+      letter-spacing: 3px;
+
+      box-shadow:
+        0 0 40px rgba(200,169,107,0.08),
+        inset 0 0 20px rgba(200,169,107,0.05);
     }
 
     h1 {
-      margin-bottom: 8px;
-      font-size: 32px;
+      font-size: clamp(27px, 7vw, 38px);
+      letter-spacing: 3px;
+      font-weight: 700;
+      line-height: 1.15;
     }
 
-    p {
-      color: #aaa;
-      margin-bottom: 30px;
+    .subtitle {
+      margin-top: 10px;
+      color: var(--gold);
+      font-size: 13px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-weight: 500;
     }
 
-    a {
-      display: block;
-      padding: 15px;
-      margin: 12px 0;
-      border-radius: 12px;
-      background: #1c1c1c;
-      color: white;
+    .line {
+      width: 55px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin: 25px auto 0;
+    }
+
+    .links {
+      margin-top: 28px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .link {
+      position: relative;
+
+      display: flex;
+      align-items: center;
+      gap: 15px;
+
+      width: 100%;
+      padding: 16px 17px;
+
       text-decoration: none;
+      color: var(--text);
+
+      background: rgba(255,255,255,0.035);
+      border: 1px solid rgba(255,255,255,0.075);
+      border-radius: 16px;
+
+      transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
     }
 
-    a:hover {
-      background: #292929;
+    .link:hover {
+      transform: translateY(-2px);
+      background: rgba(200,169,107,0.07);
+      border-color: rgba(200,169,107,0.28);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+    }
+
+    .icon {
+      width: 42px;
+      height: 42px;
+      flex: 0 0 42px;
+
+      border-radius: 12px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: rgba(255,255,255,0.045);
+      border: 1px solid rgba(255,255,255,0.06);
+
+      color: var(--gold-light);
+      font-size: 18px;
+    }
+
+    .link-text {
+      text-align: left;
+      min-width: 0;
+    }
+
+    .link-title {
+      display: block;
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 3px;
+      letter-spacing: 0.5px;
+    }
+
+    .link-value {
+      display: block;
+      font-size: 15px;
+      font-weight: 500;
+      overflow-wrap: anywhere;
+    }
+
+    .arrow {
+      margin-left: auto;
+      color: #666;
+      font-size: 18px;
+    }
+
+    .payment {
+      margin-top: 18px;
+      border: 1px solid rgba(200,169,107,0.18);
+      border-radius: 20px;
+      background:
+        linear-gradient(
+          145deg,
+          rgba(200,169,107,0.055),
+          rgba(255,255,255,0.018)
+        );
+
+      overflow: hidden;
+    }
+
+    .payment-header {
+      padding: 19px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .payment-title {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+
+      font-size: 14px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold-light);
+    }
+
+    .payment-arrow {
+      transition: transform 0.3s ease;
+      color: var(--gold);
+    }
+
+    .payment.open .payment-arrow {
+      transform: rotate(180deg);
+    }
+
+    .payment-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+    }
+
+    .payment.open .payment-content {
+      max-height: 500px;
+    }
+
+    .payment-inner {
+      padding: 0 20px 20px;
+    }
+
+    .bank {
+      padding: 14px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.035);
+      margin-bottom: 10px;
+    }
+
+    .bank-label {
+      font-size: 11px;
+      color: #777;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 5px;
+    }
+
+    .bank-name {
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .payment-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+
+      padding: 14px;
+
+      border-radius: 14px;
+      background: rgba(255,255,255,0.035);
+
+      margin-top: 10px;
+    }
+
+    .payment-info {
+      min-width: 0;
+    }
+
+    .payment-label {
+      font-size: 11px;
+      color: #777;
+      text-transform: uppercase;
+      letter-spacing: 1.3px;
+      margin-bottom: 6px;
+    }
+
+    .payment-value {
+      font-size: 14px;
+      word-break: break-all;
+      line-height: 1.5;
+    }
+
+    .copy {
+      flex: 0 0 auto;
+
+      border: 1px solid rgba(200,169,107,0.25);
+      background: rgba(200,169,107,0.08);
+      color: var(--gold-light);
+
+      border-radius: 10px;
+      padding: 9px 11px;
+
+      font-size: 11px;
+      letter-spacing: 0.8px;
+
+      cursor: pointer;
+
+      transition: 0.2s ease;
+    }
+
+    .copy:hover {
+      background: rgba(200,169,107,0.16);
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 22px;
+      color: #555;
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    @keyframes appear {
+      from {
+        opacity: 0;
+        transform: translateY(18px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 420px) {
+      body {
+        padding: 18px 12px;
+      }
+
+      .profile {
+        padding: 30px 17px 24px;
+        border-radius: 24px;
+      }
+
+      h1 {
+        letter-spacing: 2px;
+      }
+
+      .link {
+        padding: 14px;
+      }
+
+      .payment-row {
+        align-items: flex-start;
+      }
+
+      .copy {
+        margin-top: 2px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <div class="card">
-    <h1>ERFAN</h1>
-    <p>Trader • Investor</p>
+  <main class="container">
 
-    <a href="#">Instagram</a>
-    <a href="#">Telegram</a>
-    <a href="#">Contact</a>
-    <a href="#">Email</a>
-  </div>
+    <section class="profile">
+
+      <div class="monogram">
+        EA
+      </div>
+
+      <h1>ERFAN ARABZADE</h1>
+
+      <div class="subtitle">
+        Trader &amp; Investor
+      </div>
+
+      <div class="line"></div>
+
+      <div class="links">
+
+        <!-- Instagram -->
+        <a
+          class="link"
+          href="https://www.instagram.com/Er82fan.A/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div class="icon">◎</div>
+
+          <div class="link-text">
+            <span class="link-title">Instagram</span>
+            <span class="link-value">@Er82fan.A</span>
+          </div>
+
+          <span class="arrow">›</span>
+        </a>
+
+        <!-- Telegram -->
+        <a
+          class="link"
+          href="https://t.me/ErfanA01"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div class="icon">✈</div>
+
+          <div class="link-text">
+            <span class="link-title">Telegram</span>
+            <span class="link-value">@ErfanA01</span>
+          </div>
+
+          <span class="arrow">›</span>
+        </a>
+
+        <!-- Email -->
+        <a
+          class="link"
+          href="mailto:erfanarabzade82@gmail.com"
+        >
+          <div class="icon">✉</div>
+
+          <div class="link-text">
+            <span class="link-title">Email</span>
+            <span class="link-value">erfanarabzade82@gmail.com</span>
+          </div>
+
+          <span class="arrow">›</span>
+        </a>
+
+        <!-- Phone -->
+        <a
+          class="link"
+          href="tel:09132660062"
+        >
+          <div class="icon">☎</div>
+
+          <div class="link-text">
+            <span class="link-title">Phone</span>
+            <span class="link-value">09132660062</span>
+          </div>
+
+          <span class="arrow">›</span>
+        </a>
+
+      </div>
+
+      <!-- Payment -->
+      <div class="payment" id="payment">
+
+        <div
+          class="payment-header"
+          onclick="togglePayment()"
+        >
+          <div class="payment-title">
+            <span>◆</span>
+            <span>Payment</span>
+          </div>
+
+          <span class="payment-arrow">⌄</span>
+        </div>
+
+        <div class="payment-content">
+
+          <div class="payment-inner">
+
+            <div class="bank">
+
+              <div class="bank-label">
+                Bank
+              </div>
+
+              <div class="bank-name">
+                بلوبانک (بانک سامان)
+              </div>
+
+            </div>
+
+            <div class="bank">
+
+              <div class="bank-label">
+                Account Holder
+              </div>
+
+              <div class="bank-name">
+                ERFAN ARABZADE
+              </div>
+
+            </div>
+
+            <div class="payment-row">
+
+              <div class="payment-info">
+
+                <div class="payment-label">
+                  Card Number
+                </div>
+
+                <div class="payment-value">
+                  6219 8614 0491 8806
+                </div>
+
+              </div>
+
+              <button
+                class="copy"
+                onclick="copyText('6219861404918806', this)"
+              >
+                COPY
+              </button>
+
+            </div>
+
+            <div class="payment-row">
+
+              <div class="payment-info">
+
+                <div class="payment-label">
+                  IBAN
+                </div>
+
+                <div class="payment-value">
+                  IR94 0560 6118 2800 6895 0787 01
+                </div>
+
+              </div>
+
+              <button
+                class="copy"
+                onclick="copyText('IR940560611828006895078701', this)"
+              >
+                COPY
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="footer">
+        DIGITAL BUSINESS CARD
+      </div>
+
+    </section>
+
+  </main>
+
+  <script>
+
+    function togglePayment() {
+      const payment = document.getElementById("payment");
+      payment.classList.toggle("open");
+    }
+
+    function copyText(text, button) {
+
+      navigator.clipboard.writeText(text).then(() => {
+
+        const original = button.innerText;
+
+        button.innerText = "COPIED";
+
+        setTimeout(() => {
+          button.innerText = original;
+        }, 1500);
+
+      }).catch(() => {
+
+        alert("Copy failed. Please copy manually.");
+
+      });
+
+    }
+
+  </script>
 
 </body>
 </html>
