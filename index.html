@@ -1,158 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 
-<meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta
-    name="description"
-    content="ERFAN ARABZADE — Trader & Investor"
->
-
-<meta
-    name="theme-color"
-    content="#070706"
->
-
-<meta
-    name="color-scheme"
-    content="dark"
->
-
-<meta
-    name="robots"
-    content="index, follow"
->
+<meta name="description" content="ERFAN ARABZADE — Trader & Investor">
+<meta name="theme-color" content="#070706">
+<meta name="color-scheme" content="dark">
 
 <title>ERFAN ARABZADE — Trader & Investor</title>
 
-
 <style>
-
-/* =========================================================
-   ERFAN ARABZADE
-   DIGITAL BUSINESS CARD
-   PRODUCTION FINAL
-
-   STYLE:
-   Matte Black × Brushed Gold
-   Old Money × Institutional Finance
-
-   No external libraries.
-   No external fonts.
-   No external images.
-   No external dependencies.
-   ========================================================= */
-
-
-/* =========================================================
-   RESET
-   ========================================================= */
-
-*,
-*::before,
-*::after {
+* {
     box-sizing: border-box;
 }
 
-html {
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-width: 320px;
     min-height: 100%;
     background: #070706;
 }
 
 body {
-    margin: 0;
-    min-width: 320px;
-    min-height: 100vh;
-
-    background:
-        #070706;
-
     color: #eeeae1;
-
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
+    font-family: Arial, Helvetica, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-
     overflow-x: hidden;
+    padding: 18px 12px 38px;
 }
-
-
-/* =========================================================
-   PAGE BACKGROUND
-   ========================================================= */
 
 body::before {
     content: "";
-
     position: fixed;
     inset: 0;
-
     pointer-events: none;
-
     background-image:
         linear-gradient(
-            rgba(194, 153, 70, 0.018) 1px,
+            rgba(200,160,75,.018) 1px,
             transparent 1px
         ),
         linear-gradient(
             90deg,
-            rgba(194, 153, 70, 0.018) 1px,
+            rgba(200,160,75,.018) 1px,
             transparent 1px
         );
-
-    background-size: 52px 52px;
-
-    z-index: 0;
+    background-size: 50px 50px;
 }
-
-
-/* =========================================================
-   PAGE
-   ========================================================= */
 
 .page {
+    width: 100%;
+    max-width: 470px;
+    margin: 0 auto;
     position: relative;
     z-index: 1;
-
-    width: 100%;
-    max-width: 480px;
-
-    margin: 0 auto;
-
-    padding:
-        18px 12px 40px;
 }
-
-
-/* =========================================================
-   MAIN CARD
-   ========================================================= */
 
 .card {
     position: relative;
-
     overflow: hidden;
-
-    width: 100%;
-
-    padding:
-        34px 16px 22px;
-
-    border:
-        1px solid rgba(196, 157, 78, 0.24);
-
+    padding: 34px 16px 20px;
+    border: 1px solid rgba(200,160,75,.24);
     border-radius: 26px;
-
     background:
         linear-gradient(
             145deg,
@@ -160,403 +73,194 @@ body::before {
             #090908 48%,
             #11100d 100%
         );
-
     box-shadow:
-        0 30px 80px rgba(0, 0, 0, 0.65),
-        inset 0 1px 0 rgba(255, 255, 255, 0.035);
+        0 30px 80px rgba(0,0,0,.65),
+        inset 0 1px 0 rgba(255,255,255,.035);
 }
-
-
-/* =========================================================
-   SUBTLE GOLD GLOW
-   ========================================================= */
 
 .card::before {
     content: "";
-
     position: absolute;
-
-    width: 240px;
-    height: 240px;
-
+    width: 280px;
+    height: 280px;
+    top: -190px;
     left: 50%;
-    top: -150px;
-
     transform: translateX(-50%);
-
     border-radius: 50%;
-
     background:
         radial-gradient(
             circle,
-            rgba(202, 164, 88, 0.09) 0%,
-            rgba(202, 164, 88, 0.035) 35%,
-            transparent 72%
+            rgba(205,165,85,.10),
+            transparent 68%
         );
-
     pointer-events: none;
 }
 
-
-/* =========================================================
-   FINANCIAL DISTRICT ARCHITECTURE
-   ========================================================= */
+/* ---------- ARCHITECTURE ---------- */
 
 .architecture {
     position: absolute;
-
     left: 0;
     right: 0;
     bottom: 0;
-
-    height: 220px;
-
+    height: 205px;
     pointer-events: none;
-
-    opacity: 0.27;
+    opacity: .25;
 }
-
-
-/* =========================================================
-   BUILDINGS
-   ========================================================= */
 
 .building {
     position: absolute;
-
     bottom: 0;
-
-    border-left:
-        1px solid rgba(197, 157, 77, 0.12);
-
-    border-right:
-        1px solid rgba(197, 157, 77, 0.12);
+    border-left: 1px solid rgba(200,160,75,.11);
+    border-right: 1px solid rgba(200,160,75,.11);
 }
 
 .building::before {
     content: "";
-
     position: absolute;
-
     left: 20%;
     right: 20%;
-
     top: 12px;
     bottom: 12px;
-
     background:
         repeating-linear-gradient(
             to bottom,
-            rgba(197, 157, 77, 0.095) 0,
-            rgba(197, 157, 77, 0.095) 1px,
+            rgba(200,160,75,.09) 0,
+            rgba(200,160,75,.09) 1px,
             transparent 1px,
             transparent 15px
         );
 }
 
-.building::after {
-    content: "";
+.b1 { left: 3%; width: 12%; height: 90px; }
+.b2 { left: 16%; width: 15%; height: 130px; }
+.b3 { left: 33%; width: 10%; height: 75px; }
+.b4 { right: 31%; width: 11%; height: 105px; }
+.b5 { right: 16%; width: 14%; height: 145px; }
+.b6 { right: 3%; width: 10%; height: 80px; }
 
-    position: absolute;
-
-    left: 50%;
-
-    top: 0;
-    bottom: 0;
-
-    width: 1px;
-
-    background:
-        rgba(197, 157, 77, 0.045);
-}
-
-.b1 {
-    left: 3%;
-    width: 11%;
-    height: 92px;
-}
-
-.b2 {
-    left: 15%;
-    width: 15%;
-    height: 132px;
-}
-
-.b3 {
-    left: 32%;
-    width: 10%;
-    height: 78px;
-}
-
-.b4 {
-    right: 30%;
-    width: 11%;
-    height: 108px;
-}
-
-.b5 {
-    right: 15%;
-    width: 15%;
-    height: 148px;
-}
-
-.b6 {
-    right: 3%;
-    width: 10%;
-    height: 82px;
-}
-
-
-/* =========================================================
-   TRADING CANDLES
-   ========================================================= */
+/* ---------- CANDLESTICKS ---------- */
 
 .candles {
     position: absolute;
-
-    left: 12%;
-    right: 12%;
-    bottom: 7px;
-
-    height: 110px;
-
+    left: 13%;
+    right: 13%;
+    bottom: 8px;
+    height: 105px;
     display: flex;
-
     align-items: flex-end;
     justify-content: space-around;
-
-    opacity: 0.18;
+    opacity: .17;
 }
 
 .candle {
     position: relative;
-
     width: 5px;
-
+    background: #c9a967;
     border-radius: 1px;
-
-    background:
-        #c9a967;
 }
 
 .candle::before {
     content: "";
-
     position: absolute;
-
     left: 2px;
-
     top: -18px;
     bottom: -18px;
-
     width: 1px;
-
-    background:
-        #c9a967;
+    background: #c9a967;
 }
 
-.candle:nth-child(1) {
-    height: 32px;
-}
+.c1 { height: 32px; }
+.c2 { height: 54px; }
+.c3 { height: 43px; }
+.c4 { height: 70px; }
+.c5 { height: 49px; }
+.c6 { height: 84px; }
+.c7 { height: 61px; }
+.c8 { height: 38px; }
+.c9 { height: 67px; }
 
-.candle:nth-child(2) {
-    height: 54px;
-}
-
-.candle:nth-child(3) {
-    height: 43px;
-}
-
-.candle:nth-child(4) {
-    height: 72px;
-}
-
-.candle:nth-child(5) {
-    height: 49px;
-}
-
-.candle:nth-child(6) {
-    height: 86px;
-}
-
-.candle:nth-child(7) {
-    height: 62px;
-}
-
-.candle:nth-child(8) {
-    height: 39px;
-}
-
-.candle:nth-child(9) {
-    height: 68px;
-}
-
-
-/* =========================================================
-   MONOGRAM
-   ========================================================= */
+/* ---------- HEADER ---------- */
 
 .monogram {
     position: relative;
-    z-index: 3;
-
+    z-index: 2;
     width: 82px;
     height: 82px;
-
-    margin:
-        0 auto 22px;
-
+    margin: 0 auto 22px;
     display: flex;
-
     align-items: center;
     justify-content: center;
-
-    border:
-        1px solid rgba(211, 172, 92, 0.58);
-
+    border: 1px solid rgba(210,170,90,.58);
     border-radius: 50%;
-
     background:
         radial-gradient(
             circle at 30% 25%,
-            rgba(255, 255, 255, 0.075),
-            transparent 36%
+            rgba(255,255,255,.08),
+            transparent 35%
         ),
-        linear-gradient(
-            145deg,
-            #211e18,
-            #080807
-        );
-
-    color:
-        #dfc27f;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
+        linear-gradient(145deg,#211e19,#080807);
+    color: #dfc27f;
+    font-family: Georgia, "Times New Roman", serif;
     font-size: 24px;
-    font-weight: 700;
-
+    font-weight: bold;
     letter-spacing: 3px;
-
     box-shadow:
-        0 0 35px rgba(190, 150, 70, 0.08),
-        inset 0 0 20px rgba(190, 150, 70, 0.04);
+        0 0 35px rgba(190,150,70,.08),
+        inset 0 0 20px rgba(190,150,70,.04);
 }
 
 .monogram::after {
     content: "";
-
     position: absolute;
-
     inset: 6px;
-
-    border:
-        1px solid rgba(211, 172, 92, 0.13);
-
+    border: 1px solid rgba(210,170,90,.13);
     border-radius: 50%;
 }
 
-
-/* =========================================================
-   NAME
-   ========================================================= */
-
 .name {
     position: relative;
-    z-index: 3;
-
+    z-index: 2;
     text-align: center;
-
-    color:
-        #f2eee5;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
+    color: #f2eee5;
+    font-family: Georgia, "Times New Roman", serif;
     font-size: 30px;
-
     line-height: 1.2;
-
     font-weight: 500;
-
     letter-spacing: 2.4px;
 }
 
-
-/* =========================================================
-   ROLE
-   ========================================================= */
-
 .role {
     position: relative;
-    z-index: 3;
-
+    z-index: 2;
     margin-top: 10px;
-
     text-align: center;
-
-    color:
-        #c9a967;
-
+    color: #c9a967;
     font-size: 10px;
-
     font-weight: 600;
-
     letter-spacing: 3.5px;
-
     text-transform: uppercase;
 }
-
-
-/* =========================================================
-   SIGNATURE
-   ========================================================= */
 
 .quote {
     position: relative;
-    z-index: 3;
-
+    z-index: 2;
     margin-top: 13px;
-
     text-align: center;
-
-    color:
-        #918268;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
+    color: #918268;
+    font-family: Georgia, "Times New Roman", serif;
     font-size: 10px;
-
     font-style: italic;
-
     letter-spacing: 1.7px;
-
     text-transform: uppercase;
 }
 
-
-/* =========================================================
-   GOLD DIVIDER
-   ========================================================= */
-
 .gold-line {
     position: relative;
-    z-index: 3;
-
+    z-index: 2;
     width: 76px;
     height: 1px;
-
-    margin:
-        21px auto 0;
-
+    margin: 21px auto 0;
     background:
         linear-gradient(
             90deg,
@@ -566,752 +270,781 @@ body::before {
         );
 }
 
-
-/* =========================================================
-   CONTACT LINKS
-   ========================================================= */
+/* ---------- LINKS ---------- */
 
 .links {
     position: relative;
     z-index: 3;
-
     display: grid;
-
     gap: 9px;
-
     margin-top: 25px;
 }
 
-
-/* =========================================================
-   LINK CARD
-   ========================================================= */
-
 .link {
-    position: relative;
-
     display: flex;
-
     align-items: center;
-
     width: 100%;
     min-height: 64px;
-
-    padding:
-        10px 12px;
-
-    border:
-        1px solid rgba(255, 255, 255, 0.065);
-
+    padding: 10px 12px;
+    border: 1px solid rgba(255,255,255,.065);
     border-radius: 14px;
-
     background:
         linear-gradient(
             100deg,
-            rgba(255, 255, 255, 0.035),
-            rgba(255, 255, 255, 0.012)
+            rgba(255,255,255,.035),
+            rgba(255,255,255,.012)
         );
-
-    color:
-        #eeeae1;
-
+    color: #eeeae1;
     text-decoration: none;
-
-    -webkit-tap-highlight-color:
-        transparent;
-
-    transition:
-        border-color 0.18s ease,
-        background 0.18s ease,
-        transform 0.18s ease;
+    -webkit-tap-highlight-color: transparent;
 }
 
+.link:active {
+    transform: scale(.992);
+}
 
-/* Desktop hover */
-
-@media (hover: hover) {
-
+@media (hover:hover) {
     .link:hover {
-        transform:
-            translateY(-1px);
-
-        border-color:
-            rgba(197, 157, 77, 0.30);
-
+        transform: translateY(-1px);
+        border-color: rgba(200,160,75,.30);
         background:
             linear-gradient(
                 100deg,
-                rgba(190, 150, 70, 0.07),
-                rgba(255, 255, 255, 0.015)
+                rgba(190,150,70,.07),
+                rgba(255,255,255,.015)
             );
     }
-
 }
-
-
-/* Mobile press */
-
-.link:active {
-    transform:
-        scale(0.992);
-}
-
-
-/* =========================================================
-   LINK ICON
-   ========================================================= */
 
 .icon {
     width: 40px;
     height: 40px;
-
-    flex:
-        0 0 40px;
-
+    flex: 0 0 40px;
     display: flex;
-
     align-items: center;
     justify-content: center;
-
-    border:
-        1px solid rgba(190, 150, 70, 0.15);
-
+    border: 1px solid rgba(190,150,70,.15);
     border-radius: 10px;
-
-    background:
-        rgba(190, 150, 70, 0.035);
-
-    color:
-        #d6b66e;
-
+    background: rgba(190,150,70,.035);
+    color: #d6b66e;
     font-size: 17px;
 }
 
-
-/* =========================================================
-   LINK INFORMATION
-   ========================================================= */
-
 .link-info {
     min-width: 0;
-
     margin-left: 12px;
 }
 
 .label {
     display: block;
-
     margin-bottom: 4px;
-
-    color:
-        #77736b;
-
+    color: #77736b;
     font-size: 9px;
-
     letter-spacing: 1.6px;
-
     text-transform: uppercase;
 }
 
 .value {
     display: block;
-
-    color:
-        #e9e5dc;
-
+    color: #e9e5dc;
     font-size: 13.5px;
-
     font-weight: 500;
-
-    line-height: 1.35;
-
-    overflow-wrap:
-        anywhere;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
 }
-
-
-/* =========================================================
-   ARROW
-   ========================================================= */
-
-.arrow {
-    flex:
-        0 0 auto;
-
-    margin-left: auto;
-    padding-left: 8px;
-
-    color:
-        #55524d;
-
-    font-size: 20px;
-
-    line-height: 1;
-}
-
-@media (hover: hover) {
-
-    .link:hover .arrow {
-        color:
-            #c9a967;
-    }
-
-}
-
-
-/* =========================================================
-   PHONE NUMBER
-   ========================================================= */
 
 .phone-number {
     white-space: nowrap;
-
-    letter-spacing:
-        0.15px;
+    font-size: 12.8px;
 }
 
+.arrow {
+    flex: 0 0 auto;
+    margin-left: auto;
+    padding-left: 8px;
+    color: #55524d;
+    font-size: 20px;
+}
 
-/* =========================================================
-   PAYMENT SECTION
-   ========================================================= */
+@media (hover:hover) {
+    .link:hover .arrow {
+        color: #c9a967;
+    }
+}
+
+/* ---------- PAYMENT ---------- */
 
 .payment {
     position: relative;
     z-index: 3;
-
     margin-top: 15px;
-
     overflow: hidden;
-
-    border:
-        1px solid rgba(190, 150, 70, 0.20);
-
+    border: 1px solid rgba(190,150,70,.22);
     border-radius: 17px;
-
     background:
         linear-gradient(
             145deg,
-            rgba(190, 150, 70, 0.055),
-            rgba(255, 255, 255, 0.012)
+            rgba(190,150,70,.055),
+            rgba(255,255,255,.012)
         );
 }
 
-
-/* =========================================================
-   PAYMENT HEADER
-   ========================================================= */
-
 .payment-header {
     width: 100%;
-
     min-height: 62px;
-
-    padding:
-        13px 15px;
-
+    padding: 13px 15px;
     display: flex;
-
     align-items: center;
     justify-content: space-between;
-
     border: 0;
-
-    background:
-        transparent;
-
-    color:
-        inherit;
-
-    font-family:
-        inherit;
-
-    text-align:
-        left;
-
-    cursor:
-        pointer;
-
-    -webkit-tap-highlight-color:
-        transparent;
+    background: transparent;
+    color: inherit;
+    font-family: inherit;
+    text-align: left;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .payment-header:focus-visible {
-    outline:
-        2px solid rgba(201, 169, 103, 0.6);
-
-    outline-offset:
-        -2px;
+    outline: 2px solid rgba(200,160,75,.65);
+    outline-offset: -2px;
 }
-
-
-/* =========================================================
-   PAYMENT LEFT
-   ========================================================= */
 
 .payment-left {
     display: flex;
-
     align-items: center;
-
     gap: 10px;
 }
 
 .payment-icon {
     width: 30px;
     height: 30px;
-
     display: flex;
-
     align-items: center;
     justify-content: center;
-
-    border:
-        1px solid rgba(190, 150, 70, 0.20);
-
+    border: 1px solid rgba(190,150,70,.20);
     border-radius: 8px;
-
-    color:
-        #d6b66e;
-
+    color: #d6b66e;
     font-size: 11px;
 }
 
 .payment-title {
-    color:
-        #d6b66e;
-
+    display: block;
+    color: #d6b66e;
     font-size: 10px;
-
     font-weight: 600;
-
     letter-spacing: 2.5px;
-
     text-transform: uppercase;
 }
 
 .payment-subtitle {
+    display: block;
     margin-top: 3px;
-
-    color:
-        #55524d;
-
+    color: #55524d;
     font-size: 8px;
-
-    letter-spacing: 0.7px;
+    letter-spacing: .7px;
 }
 
-
-/* =========================================================
-   CHEVRON
-   ========================================================= */
-
 .payment-chevron {
-    color:
-        #b99550;
-
-    font-size: 17px;
-
-    line-height: 1;
-
-    transition:
-        transform 0.2s ease;
+    color: #b99550;
+    font-size: 18px;
+    transition: transform .2s ease;
 }
 
 .payment.open .payment-chevron {
-    transform:
-        rotate(180deg);
+    transform: rotate(180deg);
 }
 
-
-/* =========================================================
-   PAYMENT BODY
-   ========================================================= */
-
+/* Native hidden state is controlled by JS.
+   If JS fails, the content is still visible. */
 .payment-body {
+    padding: 0 14px 14px;
+}
+
+.payment-body.is-hidden {
     display: none;
-
-    padding:
-        0 14px 14px;
 }
-
-.payment.open .payment-body {
-    display: block;
-}
-
-
-/* =========================================================
-   PAYMENT BOX
-   ========================================================= */
 
 .payment-box {
-    padding:
-        12px;
-
-    margin-top:
-        8px;
-
-    border:
-        1px solid rgba(255, 255, 255, 0.055);
-
-    border-radius:
-        12px;
-
-    background:
-        rgba(0, 0, 0, 0.17);
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid rgba(255,255,255,.055);
+    border-radius: 12px;
+    background: rgba(0,0,0,.17);
 }
-
-
-/* =========================================================
-   PAYMENT ROW
-   ========================================================= */
-
-.payment-row {
-    display: flex;
-
-    align-items: center;
-
-    gap: 9px;
-}
-
-
-/* =========================================================
-   PAYMENT TEXT
-   ========================================================= */
 
 .payment-label {
     margin-bottom: 5px;
-
-    color:
-        #625e57;
-
+    color: #625e57;
     font-size: 8px;
-
     letter-spacing: 1.6px;
-
     text-transform: uppercase;
 }
 
 .payment-value {
-    flex: 1;
-
-    min-width: 0;
-
-    color:
-        #e7e2d8;
-
+    color: #e7e2d8;
     font-size: 12.5px;
-
     line-height: 1.5;
-
-    overflow-wrap:
-        anywhere;
+    overflow-wrap: anywhere;
 }
 
 .payment-value strong {
-    color:
-        #d6b66e;
+    color: #d6b66e;
 }
 
+.payment-row {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
 
-/* =========================================================
-   COPY BUTTON
-   ========================================================= */
+.payment-row .payment-value {
+    flex: 1;
+    min-width: 0;
+}
 
 .copy {
-    flex:
-        0 0 auto;
-
+    flex: 0 0 auto;
     min-width: 58px;
-
-    padding:
-        8px 9px;
-
-    border:
-        1px solid rgba(190, 150, 70, 0.24);
-
-    border-radius:
-        8px;
-
-    background:
-        rgba(190, 150, 70, 0.05);
-
-    color:
-        #d6b66e;
-
-    font-family:
-        inherit;
-
-    font-size:
-        8px;
-
-    font-weight:
-        600;
-
-    letter-spacing:
-        1px;
-
-    cursor:
-        pointer;
-
-    -webkit-tap-highlight-color:
-        transparent;
+    padding: 8px 9px;
+    border: 1px solid rgba(190,150,70,.24);
+    border-radius: 8px;
+    background: rgba(190,150,70,.05);
+    color: #d6b66e;
+    font-family: inherit;
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .copy:active {
-    background:
-        rgba(190, 150, 70, 0.15);
+    background: rgba(190,150,70,.15);
 }
 
-
-/* =========================================================
-   FOOTER
-   ========================================================= */
+/* ---------- FOOTER ---------- */
 
 .footer {
     position: relative;
     z-index: 3;
-
-    margin-top:
-        19px;
-
-    padding-top:
-        14px;
-
-    border-top:
-        1px solid rgba(255, 255, 255, 0.035);
-
-    text-align:
-        center;
-
-    color:
-        #46433e;
-
-    font-size:
-        7px;
-
-    letter-spacing:
-        3px;
-
-    text-transform:
-        uppercase;
+    margin-top: 19px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255,255,255,.035);
+    text-align: center;
+    color: #46433e;
+    font-size: 7px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
 }
 
+/* ---------- MOBILE ---------- */
 
-/* =========================================================
-   MOBILE
-   ========================================================= */
+@media (max-width:420px) {
 
-@media (max-width: 420px) {
-
-    .page {
-        padding:
-            10px 8px 28px;
+    body {
+        padding: 10px 8px 28px;
     }
 
     .card {
-        padding:
-            30px 11px 19px;
-
-        border-radius:
-            23px;
+        padding: 30px 11px 19px;
+        border-radius: 23px;
     }
 
     .monogram {
-        width:
-            76px;
-
-        height:
-            76px;
-
-        font-size:
-            22px;
+        width: 76px;
+        height: 76px;
+        font-size: 22px;
     }
 
     .name {
-        font-size:
-            24px;
-
-        letter-spacing:
-            1.8px;
+        font-size: 24px;
+        letter-spacing: 1.8px;
     }
 
     .role {
-        font-size:
-            8.5px;
-
-        letter-spacing:
-            2.8px;
+        font-size: 8.5px;
+        letter-spacing: 2.8px;
     }
 
     .quote {
-        font-size:
-            9px;
-
-        letter-spacing:
-            1.35px;
+        font-size: 9px;
+        letter-spacing: 1.35px;
     }
 
     .link {
-        min-height:
-            61px;
+        min-height: 61px;
     }
 
     .value {
-        font-size:
-            13px;
+        font-size: 13px;
     }
 
     .phone-number {
-        font-size:
-            12.5px;
+        font-size: 11.7px;
     }
 
     .architecture {
-        height:
-            175px;
-    }
-
-    .candles {
-        left:
-            14%;
-
-        right:
-            14%;
+        height: 175px;
     }
 }
 
-
-/* =========================================================
-   VERY SMALL PHONES
-   ========================================================= */
-
-@media (max-width: 350px) {
+@media (max-width:350px) {
 
     .name {
-        font-size:
-            22px;
-
-        letter-spacing:
-            1.2px;
-    }
-
-    .role {
-        font-size:
-            8px;
-
-        letter-spacing:
-            2.2px;
+        font-size: 22px;
+        letter-spacing: 1.2px;
     }
 
     .phone-number {
-        font-size:
-            11.5px;
+        font-size: 10.8px;
     }
 
     .icon {
-        width:
-            37px;
-
-        height:
-            37px;
-
-        flex-basis:
-            37px;
+        width: 37px;
+        height: 37px;
+        flex-basis: 37px;
     }
 
     .link-info {
-        margin-left:
-            9px;
+        margin-left: 9px;
     }
-
 }
 
-
-/* =========================================================
-   REDUCED MOTION
-   ========================================================= */
-
-@media (prefers-reduced-motion: reduce) {
-
+@media (prefers-reduced-motion:reduce) {
     *,
     *::before,
     *::after {
-        scroll-behavior:
-            auto !important;
-
-        transition:
-            none !important;
+        transition: none !important;
     }
-
 }
-
 </style>
-
 </head>
-
 
 <body>
 
-
 <div class="page">
-
 
 <main class="card">
 
+<!-- ARCHITECTURE -->
+<div class="architecture" aria-hidden="true">
 
-    <!-- =================================================
-         SUBTLE FINANCIAL ARCHITECTURE
-         ================================================= -->
+    <div class="building b1"></div>
+    <div class="building b2"></div>
+    <div class="building b3"></div>
+    <div class="building b4"></div>
+    <div class="building b5"></div>
+    <div class="building b6"></div>
 
-    <div
-        class="architecture"
-        aria-hidden="true"
+    <div class="candles">
+        <div class="candle c1"></div>
+        <div class="candle c2"></div>
+        <div class="candle c3"></div>
+        <div class="candle c4"></div>
+        <div class="candle c5"></div>
+        <div class="candle c6"></div>
+        <div class="candle c7"></div>
+        <div class="candle c8"></div>
+        <div class="candle c9"></div>
+    </div>
+
+</div>
+
+<!-- HEADER -->
+<div class="monogram">EA</div>
+
+<div class="name">
+    ERFAN ARABZADE
+</div>
+
+<div class="role">
+    Trader &amp; Investor
+</div>
+
+<div class="quote">
+    Patience Builds Fortune.
+</div>
+
+<div class="gold-line" aria-hidden="true"></div>
+
+
+<!-- CONTACT -->
+<div class="links">
+
+    <!-- INSTAGRAM -->
+    <a
+        class="link"
+        href="https://www.instagram.com/Er82fan.A/"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        <div class="icon" aria-hidden="true">◎</div>
+
+        <div class="link-info">
+            <span class="label">Instagram</span>
+            <span class="value">@Er82fan.A</span>
+        </div>
+
+        <span class="arrow" aria-hidden="true">›</span>
+    </a>
+
+
+    <!-- TELEGRAM -->
+    <a
+        class="link"
+        href="https://t.me/ErfanA01"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        <div class="icon" aria-hidden="true">✈</div>
+
+        <div class="link-info">
+            <span class="label">Telegram</span>
+            <span class="value">@ErfanA01</span>
+        </div>
+
+        <span class="arrow" aria-hidden="true">›</span>
+    </a>
+
+
+    <!-- EMAIL -->
+    <a
+        class="link"
+        href="mailto:erfanarabzade82@gmail.com"
+    >
+        <div class="icon" aria-hidden="true">✉</div>
+
+        <div class="link-info">
+            <span class="label">Email</span>
+            <span class="value">erfanarabzade82@gmail.com</span>
+        </div>
+
+        <span class="arrow" aria-hidden="true">›</span>
+    </a>
+
+
+    <!-- PHONE -->
+    <a
+        class="link"
+        href="tel:+989132660062"
+    >
+        <div class="icon" aria-hidden="true">☎</div>
+
+        <div class="link-info">
+            <span class="label">Phone</span>
+
+            <span
+                class="value phone-number"
+                dir="ltr"
+            >
+                🇮🇷 IR&nbsp;&nbsp;|&nbsp;&nbsp;+98&nbsp;&nbsp;|&nbsp;&nbsp;0913 266 0062
+            </span>
+        </div>
+
+        <span class="arrow" aria-hidden="true">›</span>
+    </a>
+
+
+    <!-- WHATSAPP -->
+    <a
+        class="link"
+        href="https://wa.me/989132660062"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        <div class="icon" aria-hidden="true">◉</div>
+
+        <div class="link-info">
+            <span class="label">WhatsApp</span>
+            <span class="value">Chat with me</span>
+        </div>
+
+        <span class="arrow" aria-hidden="true">›</span>
+    </a>
+
+</div>
+
+
+<!-- PAYMENT -->
+<section class="payment" id="payment">
+
+    <button
+        class="payment-header"
+        id="paymentButton"
+        type="button"
+        aria-expanded="false"
+        aria-controls="paymentBody"
     >
 
-        <div class="building b1"></div>
-        <div class="building b2"></div>
-        <div class="building b3"></div>
-        <div class="building b4"></div>
-        <div class="building b5"></div>
-        <div class="building b6"></div>
+        <span class="payment-left">
+
+            <span
+                class="payment-icon"
+                aria-hidden="true"
+            >
+                ◆
+            </span>
+
+            <span>
+                <span class="payment-title">
+                    Payment
+                </span>
+
+                <span class="payment-subtitle">
+                    Bank transfer details
+                </span>
+            </span>
+
+        </span>
+
+        <span
+            class="payment-chevron"
+            aria-hidden="true"
+        >
+            ⌄
+        </span>
+
+    </button>
 
 
-        <div class="candles">
+    <!-- PAYMENT INFORMATION -->
+    <div
+        class="payment-body is-hidden"
+        id="paymentBody"
+    >
 
-            <div class="candle"></div>
-            <div class="candle"></div>
-            <div class="candle"></div>
-            <div class="candle"></div>
-            <div class="candle"></div>
-            <div class="candle"></div>
-            <div class="candle"></div>
-            <div class="candle"></div>
-            <div class="candle"></div>
+        <!-- BANK -->
+        <div class="payment-box">
+
+            <div class="payment-label">
+                Bank
+            </div>
+
+            <div class="payment-value">
+                <strong>
+                    بلوبانک (بانک سامان)
+                </strong>
+            </div>
+
+        </div>
+
+
+        <!-- ACCOUNT HOLDER -->
+        <div class="payment-box">
+
+            <div class="payment-label">
+                Account Holder
+            </div>
+
+            <div class="payment-value">
+                <strong>
+                    ERFAN ARABZADE
+                </strong>
+            </div>
+
+        </div>
+
+
+        <!-- CARD NUMBER -->
+        <div class="payment-box">
+
+            <div class="payment-row">
+
+                <div class="payment-value">
+
+                    <div class="payment-label">
+                        Card Number
+                    </div>
+
+                    <span dir="ltr">
+                        6219 8614 0491 8806
+                    </span>
+
+                </div>
+
+                <button
+                    class="copy"
+                    type="button"
+                    data-copy="6219861404918806"
+                >
+                    COPY
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- IBAN -->
+        <div class="payment-box">
+
+            <div class="payment-row">
+
+                <div class="payment-value">
+
+                    <div class="payment-label">
+                        IBAN
+                    </div>
+
+                    <span dir="ltr">
+                        IR94 0560 6118 2800 6895 0787 01
+                    </span>
+
+                </div>
+
+                <button
+                    class="copy"
+                    type="button"
+                    data-copy="IR940560611828006895078701"
+                >
+                    COPY
+                </button>
+
+            </div>
 
         </div>
 
     </div>
 
-
-    <!-- =================================================
-         MONOGRAM
-         ================================================= -->
-
-    <div
-        class="monogram"
-        aria-label="EA"
-    >
-        EA
-    </div>
+</section>
 
 
-    <!-- =================================================
-         NAME
-         ================================================= -->
+<!-- FOOTER -->
+<div class="footer">
+    DIGITAL BUSINESS CARD · EA
+</div>
 
-    <div class="name">
-        ERFAN ARABZADE
-    </div>
+</main>
+
+</div>
 
 
+<script>
+(function () {
+
+    /* ==========================================
+       PAYMENT ACCORDION
+       ========================================== */
+
+    var payment =
+        document.getElementById("payment");
+
+    var paymentButton =
+        document.getElementById("paymentButton");
+
+    var paymentBody =
+        document.getElementById("paymentBody");
+
+
+    if (
+        payment &&
+        paymentButton &&
+        paymentBody
+    ) {
+
+        paymentButton.addEventListener(
+            "click",
+            function () {
+
+                var isOpen =
+                    paymentBody.classList.toggle(
+                        "is-hidden"
+                    );
+
+                payment.classList.toggle(
+                    "open",
+                    !isOpen
+                );
+
+                paymentButton.setAttribute(
+                    "aria-expanded",
+                    !isOpen ? "true" : "false"
+                );
+
+            }
+        );
+
+    }
+
+
+    /* ==========================================
+       COPY BUTTONS
+       ========================================== */
+
+    var copyButtons =
+        document.querySelectorAll(
+            ".copy"
+        );
+
+
+    function copied(button) {
+
+        var oldText =
+            button.textContent;
+
+        button.textContent =
+            "COPIED";
+
+        window.setTimeout(
+            function () {
+                button.textContent =
+                    oldText;
+            },
+            1400
+        );
+
+    }
+
+
+    function fallbackCopy(
+        text,
+        button
+    ) {
+
+        var area =
+            document.createElement(
+                "textarea"
+            );
+
+        area.value = text;
+
+        area.setAttribute(
+            "readonly",
+            ""
+        );
+
+        area.style.position =
+            "fixed";
+
+        area.style.left =
+            "-9999px";
+
+        area.style.top =
+            "0";
+
+        document.body.appendChild(
+            area
+        );
+
+        area.focus();
+        area.select();
+
+        var success = false;
+
+        try {
+            success =
+                document.execCommand(
+                    "copy"
+                );
+        }
+        catch (e) {
+            success = false;
+        }
+
+        document.body.removeChild(
+            area
+        );
+
+        if (success) {
     
