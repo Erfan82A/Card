@@ -12,6 +12,11 @@
 <title>ERFAN ARABZADE — Trader & Investor</title>
 
 <style>
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
 * {
     box-sizing: border-box;
 }
@@ -27,18 +32,30 @@ body {
 
 body {
     color: #eeeae1;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
     overflow-x: hidden;
+
     padding: 18px 12px 38px;
 }
+
+
+/* =========================================================
+   SUBTLE BACKGROUND GRID
+   ========================================================= */
 
 body::before {
     content: "";
     position: fixed;
     inset: 0;
     pointer-events: none;
+
     background-image:
         linear-gradient(
             rgba(200,160,75,.018) 1px,
@@ -49,13 +66,20 @@ body::before {
             rgba(200,160,75,.018) 1px,
             transparent 1px
         );
+
     background-size: 50px 50px;
 }
+
+
+/* =========================================================
+   PAGE / CARD
+   ========================================================= */
 
 .page {
     width: 100%;
     max-width: 470px;
     margin: 0 auto;
+
     position: relative;
     z-index: 1;
 }
@@ -63,9 +87,12 @@ body::before {
 .card {
     position: relative;
     overflow: hidden;
+
     padding: 34px 16px 20px;
+
     border: 1px solid rgba(200,160,75,.24);
     border-radius: 26px;
+
     background:
         linear-gradient(
             145deg,
@@ -73,6 +100,7 @@ body::before {
             #090908 48%,
             #11100d 100%
         );
+
     box-shadow:
         0 30px 80px rgba(0,0,0,.65),
         inset 0 1px 0 rgba(255,255,255,.035);
@@ -80,48 +108,70 @@ body::before {
 
 .card::before {
     content: "";
+
     position: absolute;
+
     width: 280px;
     height: 280px;
+
     top: -190px;
     left: 50%;
+
     transform: translateX(-50%);
+
     border-radius: 50%;
+
     background:
         radial-gradient(
             circle,
             rgba(205,165,85,.10),
             transparent 68%
         );
+
     pointer-events: none;
 }
 
-/* ---------- ARCHITECTURE ---------- */
+
+/* =========================================================
+   BACKGROUND ARCHITECTURE
+   ========================================================= */
 
 .architecture {
     position: absolute;
+
     left: 0;
     right: 0;
     bottom: 0;
+
     height: 205px;
+
     pointer-events: none;
+
     opacity: .25;
 }
 
 .building {
     position: absolute;
     bottom: 0;
-    border-left: 1px solid rgba(200,160,75,.11);
-    border-right: 1px solid rgba(200,160,75,.11);
+
+    border-left:
+        1px solid rgba(200,160,75,.11);
+
+    border-right:
+        1px solid rgba(200,160,75,.11);
 }
 
 .building::before {
     content: "";
+
     position: absolute;
+
     left: 20%;
     right: 20%;
+
     top: 12px;
     bottom: 12px;
+
     background:
         repeating-linear-gradient(
             to bottom,
@@ -132,41 +182,84 @@ body::before {
         );
 }
 
-.b1 { left: 3%; width: 12%; height: 90px; }
-.b2 { left: 16%; width: 15%; height: 130px; }
-.b3 { left: 33%; width: 10%; height: 75px; }
-.b4 { right: 31%; width: 11%; height: 105px; }
-.b5 { right: 16%; width: 14%; height: 145px; }
-.b6 { right: 3%; width: 10%; height: 80px; }
+.b1 {
+    left: 3%;
+    width: 12%;
+    height: 90px;
+}
 
-/* ---------- CANDLESTICKS ---------- */
+.b2 {
+    left: 16%;
+    width: 15%;
+    height: 130px;
+}
+
+.b3 {
+    left: 33%;
+    width: 10%;
+    height: 75px;
+}
+
+.b4 {
+    right: 31%;
+    width: 11%;
+    height: 105px;
+}
+
+.b5 {
+    right: 16%;
+    width: 14%;
+    height: 145px;
+}
+
+.b6 {
+    right: 3%;
+    width: 10%;
+    height: 80px;
+}
+
+
+/* =========================================================
+   CANDLESTICKS
+   ========================================================= */
 
 .candles {
     position: absolute;
+
     left: 13%;
     right: 13%;
     bottom: 8px;
+
     height: 105px;
+
     display: flex;
     align-items: flex-end;
     justify-content: space-around;
+
     opacity: .17;
 }
 
 .candle {
     position: relative;
+
     width: 5px;
+
     background: #c9a967;
+
     border-radius: 1px;
 }
 
 .candle::before {
     content: "";
+
     position: absolute;
+
     left: 2px;
     top: -18px;
     bottom: -18px;
+
     width: 1px;
+
     background: #c9a967;
 }
 
@@ -180,31 +273,53 @@ body::before {
 .c8 { height: 38px; }
 .c9 { height: 67px; }
 
-/* ---------- HEADER ---------- */
+
+/* =========================================================
+   HEADER
+   ========================================================= */
 
 .monogram {
     position: relative;
     z-index: 2;
+
     width: 82px;
     height: 82px;
+
     margin: 0 auto 22px;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid rgba(210,170,90,.58);
+
+    border:
+        1px solid rgba(210,170,90,.58);
+
     border-radius: 50%;
+
     background:
         radial-gradient(
             circle at 30% 25%,
             rgba(255,255,255,.08),
             transparent 35%
         ),
-        linear-gradient(145deg,#211e19,#080807);
+        linear-gradient(
+            145deg,
+            #211e19,
+            #080807
+        );
+
     color: #dfc27f;
-    font-family: Georgia, "Times New Roman", serif;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
     font-size: 24px;
     font-weight: bold;
+
     letter-spacing: 3px;
+
     box-shadow:
         0 0 35px rgba(190,150,70,.08),
         inset 0 0 20px rgba(190,150,70,.04);
@@ -212,55 +327,86 @@ body::before {
 
 .monogram::after {
     content: "";
+
     position: absolute;
     inset: 6px;
-    border: 1px solid rgba(210,170,90,.13);
+
+    border:
+        1px solid rgba(210,170,90,.13);
+
     border-radius: 50%;
 }
 
 .name {
     position: relative;
     z-index: 2;
+
     text-align: center;
+
     color: #f2eee5;
-    font-family: Georgia, "Times New Roman", serif;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
     font-size: 30px;
     line-height: 1.2;
     font-weight: 500;
+
     letter-spacing: 2.4px;
 }
 
 .role {
     position: relative;
     z-index: 2;
+
     margin-top: 10px;
+
     text-align: center;
+
     color: #c9a967;
+
     font-size: 10px;
     font-weight: 600;
+
     letter-spacing: 3.5px;
+
     text-transform: uppercase;
 }
 
 .quote {
     position: relative;
     z-index: 2;
+
     margin-top: 13px;
+
     text-align: center;
+
     color: #918268;
-    font-family: Georgia, "Times New Roman", serif;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
     font-size: 10px;
     font-style: italic;
+
     letter-spacing: 1.7px;
+
     text-transform: uppercase;
 }
 
 .gold-line {
     position: relative;
     z-index: 2;
+
     width: 76px;
     height: 1px;
+
     margin: 21px auto 0;
+
     background:
         linear-gradient(
             90deg,
@@ -270,33 +416,52 @@ body::before {
         );
 }
 
-/* ---------- LINKS ---------- */
+
+/* =========================================================
+   LINK BUTTONS
+   ========================================================= */
 
 .links {
     position: relative;
     z-index: 3;
+
     display: grid;
     gap: 9px;
+
     margin-top: 25px;
 }
 
 .link {
     display: flex;
     align-items: center;
+
     width: 100%;
     min-height: 64px;
+
     padding: 10px 12px;
-    border: 1px solid rgba(255,255,255,.065);
+
+    border:
+        1px solid rgba(255,255,255,.065);
+
     border-radius: 14px;
+
     background:
         linear-gradient(
             100deg,
             rgba(255,255,255,.035),
             rgba(255,255,255,.012)
         );
+
     color: #eeeae1;
+
     text-decoration: none;
+
     -webkit-tap-highlight-color: transparent;
+
+    transition:
+        transform .15s ease,
+        border-color .15s ease,
+        background .15s ease;
 }
 
 .link:active {
@@ -304,9 +469,13 @@ body::before {
 }
 
 @media (hover:hover) {
+
     .link:hover {
         transform: translateY(-1px);
-        border-color: rgba(200,160,75,.30);
+
+        border-color:
+            rgba(200,160,75,.30);
+
         background:
             linear-gradient(
                 100deg,
@@ -314,42 +483,62 @@ body::before {
                 rgba(255,255,255,.015)
             );
     }
+
 }
 
 .icon {
     width: 40px;
     height: 40px;
+
     flex: 0 0 40px;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid rgba(190,150,70,.15);
+
+    border:
+        1px solid rgba(190,150,70,.15);
+
     border-radius: 10px;
-    background: rgba(190,150,70,.035);
+
+    background:
+        rgba(190,150,70,.035);
+
     color: #d6b66e;
+
     font-size: 17px;
 }
 
 .link-info {
     min-width: 0;
+
     margin-left: 12px;
 }
 
 .label {
     display: block;
+
     margin-bottom: 4px;
+
     color: #77736b;
+
     font-size: 9px;
+
     letter-spacing: 1.6px;
+
     text-transform: uppercase;
 }
 
 .value {
     display: block;
+
     color: #e9e5dc;
+
     font-size: 13.5px;
     font-weight: 500;
+
     line-height: 1.4;
+
     overflow-wrap: anywhere;
 }
 
@@ -360,27 +549,33 @@ body::before {
 
 .arrow {
     flex: 0 0 auto;
+
     margin-left: auto;
     padding-left: 8px;
+
     color: #55524d;
+
     font-size: 20px;
 }
 
-@media (hover:hover) {
-    .link:hover .arrow {
-        color: #c9a967;
-    }
-}
 
-/* ---------- PAYMENT ---------- */
+/* =========================================================
+   PAYMENT
+   ========================================================= */
 
 .payment {
     position: relative;
-    z-index: 3;
+    z-index: 4;
+
     margin-top: 15px;
+
     overflow: hidden;
-    border: 1px solid rgba(190,150,70,.22);
+
+    border:
+        1px solid rgba(190,150,70,.22);
+
     border-radius: 17px;
+
     background:
         linear-gradient(
             145deg,
@@ -392,71 +587,105 @@ body::before {
 .payment-header {
     width: 100%;
     min-height: 62px;
+
     padding: 13px 15px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     border: 0;
+
     background: transparent;
+
     color: inherit;
+
     font-family: inherit;
+
     text-align: left;
+
     cursor: pointer;
+
     -webkit-tap-highlight-color: transparent;
 }
 
 .payment-header:focus-visible {
-    outline: 2px solid rgba(200,160,75,.65);
+    outline:
+        2px solid rgba(200,160,75,.65);
+
     outline-offset: -2px;
 }
 
 .payment-left {
     display: flex;
     align-items: center;
+
     gap: 10px;
 }
 
 .payment-icon {
     width: 30px;
     height: 30px;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid rgba(190,150,70,.20);
+
+    border:
+        1px solid rgba(190,150,70,.20);
+
     border-radius: 8px;
+
     color: #d6b66e;
+
     font-size: 11px;
 }
 
 .payment-title {
     display: block;
+
     color: #d6b66e;
+
     font-size: 10px;
     font-weight: 600;
+
     letter-spacing: 2.5px;
+
     text-transform: uppercase;
 }
 
 .payment-subtitle {
     display: block;
+
     margin-top: 3px;
+
     color: #55524d;
+
     font-size: 8px;
+
     letter-spacing: .7px;
 }
 
 .payment-chevron {
     color: #b99550;
+
     font-size: 18px;
-    transition: transform .2s ease;
+
+    transition:
+        transform .2s ease;
 }
 
 .payment.open .payment-chevron {
     transform: rotate(180deg);
 }
 
-/* Native hidden state is controlled by JS.
-   If JS fails, the content is still visible. */
+
+/*
+   IMPORTANT:
+   Payment content is hidden by CSS class only.
+   JavaScript simply removes/adds this class.
+*/
+
 .payment-body {
     padding: 0 14px 14px;
 }
@@ -465,26 +694,44 @@ body::before {
     display: none;
 }
 
+
+/* =========================================================
+   PAYMENT BOXES
+   ========================================================= */
+
 .payment-box {
     padding: 12px;
+
     margin-top: 8px;
-    border: 1px solid rgba(255,255,255,.055);
+
+    border:
+        1px solid rgba(255,255,255,.055);
+
     border-radius: 12px;
-    background: rgba(0,0,0,.17);
+
+    background:
+        rgba(0,0,0,.17);
 }
 
 .payment-label {
     margin-bottom: 5px;
+
     color: #625e57;
+
     font-size: 8px;
+
     letter-spacing: 1.6px;
+
     text-transform: uppercase;
 }
 
 .payment-value {
     color: #e7e2d8;
+
     font-size: 12.5px;
+
     line-height: 1.5;
+
     overflow-wrap: anywhere;
 }
 
@@ -495,6 +742,7 @@ body::before {
 .payment-row {
     display: flex;
     align-items: center;
+
     gap: 9px;
 }
 
@@ -505,40 +753,69 @@ body::before {
 
 .copy {
     flex: 0 0 auto;
+
     min-width: 58px;
+
     padding: 8px 9px;
-    border: 1px solid rgba(190,150,70,.24);
+
+    border:
+        1px solid rgba(190,150,70,.24);
+
     border-radius: 8px;
-    background: rgba(190,150,70,.05);
+
+    background:
+        rgba(190,150,70,.05);
+
     color: #d6b66e;
+
     font-family: inherit;
+
     font-size: 8px;
     font-weight: 600;
+
     letter-spacing: 1px;
+
     cursor: pointer;
+
     -webkit-tap-highlight-color: transparent;
 }
 
 .copy:active {
-    background: rgba(190,150,70,.15);
+    background:
+        rgba(190,150,70,.15);
 }
 
-/* ---------- FOOTER ---------- */
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
 
 .footer {
     position: relative;
     z-index: 3;
+
     margin-top: 19px;
+
     padding-top: 14px;
-    border-top: 1px solid rgba(255,255,255,.035);
+
+    border-top:
+        1px solid rgba(255,255,255,.035);
+
     text-align: center;
+
     color: #46433e;
+
     font-size: 7px;
+
     letter-spacing: 3px;
+
     text-transform: uppercase;
 }
 
-/* ---------- MOBILE ---------- */
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
 
 @media (max-width:420px) {
 
@@ -554,6 +831,7 @@ body::before {
     .monogram {
         width: 76px;
         height: 76px;
+
         font-size: 22px;
     }
 
@@ -587,7 +865,13 @@ body::before {
     .architecture {
         height: 175px;
     }
+
 }
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
 
 @media (max-width:350px) {
 
@@ -603,23 +887,34 @@ body::before {
     .icon {
         width: 37px;
         height: 37px;
+
         flex-basis: 37px;
     }
 
     .link-info {
         margin-left: 9px;
     }
+
 }
 
-@media (prefers-reduced-motion:reduce) {
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
     *,
     *::before,
     *::after {
         transition: none !important;
     }
+
 }
+
 </style>
 </head>
+
 
 <body>
 
@@ -627,7 +922,11 @@ body::before {
 
 <main class="card">
 
-<!-- ARCHITECTURE -->
+
+<!-- =====================================================
+     BACKGROUND ARCHITECTURE
+     ===================================================== -->
+
 <div class="architecture" aria-hidden="true">
 
     <div class="building b1"></div>
@@ -638,6 +937,7 @@ body::before {
     <div class="building b6"></div>
 
     <div class="candles">
+
         <div class="candle c1"></div>
         <div class="candle c2"></div>
         <div class="candle c3"></div>
@@ -647,12 +947,19 @@ body::before {
         <div class="candle c7"></div>
         <div class="candle c8"></div>
         <div class="candle c9"></div>
+
     </div>
 
 </div>
 
-<!-- HEADER -->
-<div class="monogram">EA</div>
+
+<!-- =====================================================
+     HEADER
+     ===================================================== -->
+
+<div class="monogram">
+    EA
+</div>
 
 <div class="name">
     ERFAN ARABZADE
@@ -669,70 +976,123 @@ body::before {
 <div class="gold-line" aria-hidden="true"></div>
 
 
-<!-- CONTACT -->
+<!-- =====================================================
+     SOCIAL / CONTACT LINKS
+     ===================================================== -->
+
 <div class="links">
 
+
     <!-- INSTAGRAM -->
+
     <a
         class="link"
         href="https://www.instagram.com/Er82fan.A/"
         target="_blank"
         rel="noopener noreferrer"
     >
-        <div class="icon" aria-hidden="true">◎</div>
 
-        <div class="link-info">
-            <span class="label">Instagram</span>
-            <span class="value">@Er82fan.A</span>
+        <div class="icon" aria-hidden="true">
+            ◎
         </div>
 
-        <span class="arrow" aria-hidden="true">›</span>
+        <div class="link-info">
+
+            <span class="label">
+                Instagram
+            </span>
+
+            <span class="value">
+                @Er82fan.A
+            </span>
+
+        </div>
+
+        <span class="arrow" aria-hidden="true">
+            ›
+        </span>
+
     </a>
 
 
     <!-- TELEGRAM -->
+
     <a
         class="link"
         href="https://t.me/ErfanA01"
         target="_blank"
         rel="noopener noreferrer"
     >
-        <div class="icon" aria-hidden="true">✈</div>
 
-        <div class="link-info">
-            <span class="label">Telegram</span>
-            <span class="value">@ErfanA01</span>
+        <div class="icon" aria-hidden="true">
+            ✈
         </div>
 
-        <span class="arrow" aria-hidden="true">›</span>
+        <div class="link-info">
+
+            <span class="label">
+                Telegram
+            </span>
+
+            <span class="value">
+                @ErfanA01
+            </span>
+
+        </div>
+
+        <span class="arrow" aria-hidden="true">
+            ›
+        </span>
+
     </a>
 
 
     <!-- EMAIL -->
+
     <a
         class="link"
         href="mailto:erfanarabzade82@gmail.com"
     >
-        <div class="icon" aria-hidden="true">✉</div>
 
-        <div class="link-info">
-            <span class="label">Email</span>
-            <span class="value">erfanarabzade82@gmail.com</span>
+        <div class="icon" aria-hidden="true">
+            ✉
         </div>
 
-        <span class="arrow" aria-hidden="true">›</span>
+        <div class="link-info">
+
+            <span class="label">
+                Email
+            </span>
+
+            <span class="value">
+                erfanarabzade82@gmail.com
+            </span>
+
+        </div>
+
+        <span class="arrow" aria-hidden="true">
+            ›
+        </span>
+
     </a>
 
 
     <!-- PHONE -->
+
     <a
         class="link"
         href="tel:+989132660062"
     >
-        <div class="icon" aria-hidden="true">☎</div>
+
+        <div class="icon" aria-hidden="true">
+            ☎
+        </div>
 
         <div class="link-info">
-            <span class="label">Phone</span>
+
+            <span class="label">
+                Phone
+            </span>
 
             <span
                 class="value phone-number"
@@ -740,34 +1100,62 @@ body::before {
             >
                 🇮🇷 IR&nbsp;&nbsp;|&nbsp;&nbsp;+98&nbsp;&nbsp;|&nbsp;&nbsp;0913 266 0062
             </span>
+
         </div>
 
-        <span class="arrow" aria-hidden="true">›</span>
+        <span class="arrow" aria-hidden="true">
+            ›
+        </span>
+
     </a>
 
 
     <!-- WHATSAPP -->
+
     <a
         class="link"
         href="https://wa.me/989132660062"
         target="_blank"
         rel="noopener noreferrer"
     >
-        <div class="icon" aria-hidden="true">◉</div>
 
-        <div class="link-info">
-            <span class="label">WhatsApp</span>
-            <span class="value">Chat with me</span>
+        <div class="icon" aria-hidden="true">
+            ◉
         </div>
 
-        <span class="arrow" aria-hidden="true">›</span>
+        <div class="link-info">
+
+            <span class="label">
+                WhatsApp
+            </span>
+
+            <span class="value">
+                Chat with me
+            </span>
+
+        </div>
+
+        <span class="arrow" aria-hidden="true">
+            ›
+        </span>
+
     </a>
+
 
 </div>
 
 
-<!-- PAYMENT -->
-<section class="payment" id="payment">
+<!-- =====================================================
+     PAYMENT ACCORDION
+     ===================================================== -->
+
+<section
+    class="payment"
+    id="payment"
+>
+
+
+    <!-- PAYMENT HEADER -->
 
     <button
         class="payment-header"
@@ -787,6 +1175,7 @@ body::before {
             </span>
 
             <span>
+
                 <span class="payment-title">
                     Payment
                 </span>
@@ -794,9 +1183,11 @@ body::before {
                 <span class="payment-subtitle">
                     Bank transfer details
                 </span>
+
             </span>
 
         </span>
+
 
         <span
             class="payment-chevron"
@@ -808,13 +1199,18 @@ body::before {
     </button>
 
 
-    <!-- PAYMENT INFORMATION -->
+    <!-- =================================================
+         PAYMENT BODY
+         ================================================= -->
+
     <div
         class="payment-body is-hidden"
         id="paymentBody"
     >
 
+
         <!-- BANK -->
+
         <div class="payment-box">
 
             <div class="payment-label">
@@ -822,15 +1218,18 @@ body::before {
             </div>
 
             <div class="payment-value">
+
                 <strong>
                     بلوبانک (بانک سامان)
                 </strong>
+
             </div>
 
         </div>
 
 
         <!-- ACCOUNT HOLDER -->
+
         <div class="payment-box">
 
             <div class="payment-label">
@@ -838,15 +1237,18 @@ body::before {
             </div>
 
             <div class="payment-value">
+
                 <strong>
                     ERFAN ARABZADE
                 </strong>
+
             </div>
 
         </div>
 
 
         <!-- CARD NUMBER -->
+
         <div class="payment-box">
 
             <div class="payment-row">
@@ -859,192 +1261,4 @@ body::before {
 
                     <span dir="ltr">
                         6219 8614 0491 8806
-                    </span>
-
-                </div>
-
-                <button
-                    class="copy"
-                    type="button"
-                    data-copy="6219861404918806"
-                >
-                    COPY
-                </button>
-
-            </div>
-
-        </div>
-
-
-        <!-- IBAN -->
-        <div class="payment-box">
-
-            <div class="payment-row">
-
-                <div class="payment-value">
-
-                    <div class="payment-label">
-                        IBAN
-                    </div>
-
-                    <span dir="ltr">
-                        IR94 0560 6118 2800 6895 0787 01
-                    </span>
-
-                </div>
-
-                <button
-                    class="copy"
-                    type="button"
-                    data-copy="IR940560611828006895078701"
-                >
-                    COPY
-                </button>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- FOOTER -->
-<div class="footer">
-    DIGITAL BUSINESS CARD · EA
-</div>
-
-</main>
-
-</div>
-
-
-<script>
-(function () {
-
-    /* ==========================================
-       PAYMENT ACCORDION
-       ========================================== */
-
-    var payment =
-        document.getElementById("payment");
-
-    var paymentButton =
-        document.getElementById("paymentButton");
-
-    var paymentBody =
-        document.getElementById("paymentBody");
-
-
-    if (
-        payment &&
-        paymentButton &&
-        paymentBody
-    ) {
-
-        paymentButton.addEventListener(
-            "click",
-            function () {
-
-                var isOpen =
-                    paymentBody.classList.toggle(
-                        "is-hidden"
-                    );
-
-                payment.classList.toggle(
-                    "open",
-                    !isOpen
-                );
-
-                paymentButton.setAttribute(
-                    "aria-expanded",
-                    !isOpen ? "true" : "false"
-                );
-
-            }
-        );
-
-    }
-
-
-    /* ==========================================
-       COPY BUTTONS
-       ========================================== */
-
-    var copyButtons =
-        document.querySelectorAll(
-            ".copy"
-        );
-
-
-    function copied(button) {
-
-        var oldText =
-            button.textContent;
-
-        button.textContent =
-            "COPIED";
-
-        window.setTimeout(
-            function () {
-                button.textContent =
-                    oldText;
-            },
-            1400
-        );
-
-    }
-
-
-    function fallbackCopy(
-        text,
-        button
-    ) {
-
-        var area =
-            document.createElement(
-                "textarea"
-            );
-
-        area.value = text;
-
-        area.setAttribute(
-            "readonly",
-            ""
-        );
-
-        area.style.position =
-            "fixed";
-
-        area.style.left =
-            "-9999px";
-
-        area.style.top =
-            "0";
-
-        document.body.appendChild(
-            area
-        );
-
-        area.focus();
-        area.select();
-
-        var success = false;
-
-        try {
-            success =
-                document.execCommand(
-                    "copy"
-                );
-        }
-        catch (e) {
-            success = false;
-        }
-
-        document.body.removeChild(
-            area
-        );
-
-        if (success) {
     
